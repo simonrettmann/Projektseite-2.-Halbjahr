@@ -12,10 +12,10 @@
 <h4 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle-2.-Halbjahr"> Stundenprotokolle 2. Halbjahr</a> </h4> 
 <h4 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle"> Stundenprotokolle 1. Halbjahr</a> </h4> 
 <h4 align="left"> &#10132; <a href="https://www.youtube.com/channel/UCEljeGxqUxyXQlMq9Q-U8_w"> YouTube Kanal - Novum hotplate</a> </h4>
+<img align="right" alt="Animation" width="700" height="400" src="https://user-images.githubusercontent.com/88385654/144711039-e3602339-827f-42a6-b684-b21d3ee8bcf1.gif">
+  
 </body>
 <hr>
-
-<img align="center" alt="Animation" width="700" height="400" src="https://user-images.githubusercontent.com/88385654/144711039-e3602339-827f-42a6-b684-b21d3ee8bcf1.gif">
 <body>
   
 <h2 align="center"> Inhaltsverzeichnis </h2>
@@ -42,7 +42,7 @@
 <ul>
 &#10148; <a href="#Reflexion"> Reflexion des Projekts</a>
 </ul>
-  
+</body>
 <hr>
 
 <h4> <a id="#Rückblick"> Ausgangslage</a></h4>
