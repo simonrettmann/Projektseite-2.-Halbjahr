@@ -55,11 +55,10 @@ Während der letzten Projektphase im 1. Halbjahr arbeitete die Gruppe an einem a
 <details>
  <summary>Bildergalerie</summary>
  
- <b> Bild vom Kochtopf mit integrierten Thermometer </b> 
-<img alt="Kochtopf" width="100" scr="https://user-images.githubusercontent.com/88385654/162031321-12117dbe-57f4-40b7-9175-c426a83baa7c.jpg">
- <b> Bild vom Schrittmotor auf der Gasflasche</b>
+<figure>
 <img alt="Schrittmotor" align="center" width="200" src="https://user-images.githubusercontent.com/88385654/162031011-f48fb0e4-3051-428b-b170-a0e1aee11551.jpg">
-
+ <figcaption>Bild vom Schrittmotor auf der Gasflasche</figcaption>
+</figure>
 
 
  </details>
