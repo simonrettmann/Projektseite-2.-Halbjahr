@@ -21,7 +21,8 @@
 <h2 align="center"> Inhaltsverzeichnis </h2>
   
 <b> 1. Allgemeines </b>
-&#10148;<a href="#Rückblick" Ausgangslage</a>
+<br/>
+&#10148; <a href="#Rückblick"> Ausgangslage</a>
 &blacktriangleright; <a href="#Zielsetzung" Zielsetzung für das 2. Halbjahr</a>
 &blacktriangleright; <a href="#Lernen" Zu erlernende Fähigkeiten</a>
 &blacktriangleright; <a href="#Hardware" erforderliche Hardware</a>
