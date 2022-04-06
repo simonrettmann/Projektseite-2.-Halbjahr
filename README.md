@@ -46,11 +46,11 @@
 </body>
 <hr>
 
-<h4> <a id="#Rückblick"> 1.1 Ausgangslage</a></h4>
-<h4> <a id="#Zielsetzung"> 1.2 Zielsetzung für das 2. Halbjahr </a>
-<h4> <a id="#Lernen"> 1.3 Zu erlernende Fähigkeiten </a>
-<h4> <a id="#Hardware"> 1.4 erforderliche Hardware </a>
-<h4> <a id="#Arduino"> 2.1 Arduino </a>
-<h4> <a id="#Website"> 2.2 Website, Dantenbank, Server </a>
-<h4> <a id="#Endprodukt"> 2.3 Das Endprodukt </a>
-<h4> <a id="#Relexion"> 3.1 Reflexion des Projekts </a>
+<h3> <a id="#Rückblick"> 1.1 Ausgangslage</a></h3>
+<h3> <a id="#Zielsetzung"> 1.2 Zielsetzung für das 2. Halbjahr </a></h3>
+<h3> <a id="#Lernen"> 1.3 Zu erlernende Fähigkeiten </a></h3>
+<h3> <a id="#Hardware"> 1.4 erforderliche Hardware </a></h3>
+<h3> <a id="#Arduino"> 2.1 Arduino </a></h3>
+<h3> <a id="#Website"> 2.2 Website, Dantenbank, Server </a></h3>
+<h3> <a id="#Endprodukt"> 2.3 Das Endprodukt </a></h3>
+<h3> <a id="#Relexion"> 3.1 Reflexion des Projekts </a></h3>
