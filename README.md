@@ -17,8 +17,8 @@
 </body>
 
 <h3 align="center"> Inhaltsverzeichnis </h3>
-<b>Allgemeines</b> <br/>
-&blacktriangleright; <a href="#Rückblick" Ausgangslage</a>
+<b> 1. Allgemeines </b> <br/>
+&#9656; <a href="#Rückblick" Ausgangslage</a>
 &blacktriangleright; <a href="#Zielsetzung" Zielsetzung für das 2. Halbjahr</a>
 &blacktriangleright; <a href="#Lernen" Zu erlernende Fähigkeiten</a>
 <b>Das Projekt</b> <br/>
