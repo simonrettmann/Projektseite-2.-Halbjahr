@@ -10,10 +10,10 @@
 <br/>
 
 <body>
-<h3 align="left"> &#10132; <a href="https://github.com/simonrettmann/Projektseite"> Projektseite 1. Halbjahr</a> </h3> 
-<h3 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle-2.-Halbjahr"> Stundenprotokolle 2. Halbjahr</a> </h3> 
-<h3 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle"> Stundenprotokolle 1. Halbjahr</a> </h3> 
-<h3 align="left"> &#10132; fa fa-youtube <a href="https://www.youtube.com/channel/UCEljeGxqUxyXQlMq9Q-U8_w"> YouTube Kanal - Novum hotplate</a> </h3>
+<h4 align="left"> &#10132; <a href="https://github.com/simonrettmann/Projektseite"> Projektseite 1. Halbjahr</a> </h4> 
+<h4 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle-2.-Halbjahr"> Stundenprotokolle 2. Halbjahr</a> </h4> 
+<h4 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle"> Stundenprotokolle 1. Halbjahr</a> </h4> 
+<h4 align="left"> &#10132; <a href="https://www.youtube.com/channel/UCEljeGxqUxyXQlMq9Q-U8_w"> YouTube Kanal - Novum hotplate</a> </h4>
 </body>
 <hr>
 <body>
