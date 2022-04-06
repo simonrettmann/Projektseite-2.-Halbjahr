@@ -51,6 +51,14 @@
 
 <body>
 Während der letzten Projektphase im 1. Halbjahr arbeitete die Gruppe an einem arduinogesteuerten Gaskocher. Ziel war es einen Gaskocher so steuern zu können, dass eine vorher eingestellte Temperatur in einem Kochtopf erreicht und gehalten werden kann. Für die Eingabe von Werten in °C wurde ein rotary encoder verwendet, sodass man in mehreren Modi die Temperatur gradgenau einstellen kann. Außerdem ist ein Thermometer in dem Topfdeckel integriert, das dauerhauft die Temperatur des Topfinhaltes misst und an den Arduino weitergibt. Die ankommenden Werte werden von dem Arduino verrechnet und über eine logistische Funktion in eine prozentuale Öffnung des Gaskochers umgerechnet. Der Gasfluss zum Gaskocher wird über einen Schrittmotor geregelt. Eine automatische Zündung ist nicht integriert, sodass man diese händisch bei leichter Öffnung des Ventils vornehmen muss. Außerdem speichert der Schrittmotor seine absolute Position leider nicht und diese kann auch nicht angegeben werden, sodass vor der Motor vor jeder Benutzung kalibiert werden muss. 
+
+<details>
+ <summary>Bildergalerie</summary>
+ <img alt="scr="https://user-images.githubusercontent.com/88385654/162030065-e683203c-cdd0-4e08-898c-c9d2f2b03dc0.jpg">
+![IMG_2025 Kopie](https://user-images.githubusercontent.com/88385654/162030157-b7d38af9-2d45-4e93-9f1c-0558d59ecdbc.jpg)
+
+
+ </details>
 </body>
 <h3> <a id="#Zielsetzung"> 1.2 Zielsetzung für das 2. Halbjahr </a></h3>
 
