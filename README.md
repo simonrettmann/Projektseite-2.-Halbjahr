@@ -16,9 +16,12 @@
 <h3 align="left"> &#10132; <a href="https://www.youtube.com/channel/UCEljeGxqUxyXQlMq9Q-U8_w"> YouTube Kanal - Novum hotplate</a> </h3>
 </body>
 <hr>
+<body>
+  
 <h2 align="center"> Inhaltsverzeichnis </h2>
-<b> 1. Allgemeines </b> <br/>
-&#9656; <a href="#Rückblick" Ausgangslage</a>
+  
+<b> 1. Allgemeines </b>
+&#10148;<a href="#Rückblick" Ausgangslage</a>
 &blacktriangleright; <a href="#Zielsetzung" Zielsetzung für das 2. Halbjahr</a>
 &blacktriangleright; <a href="#Lernen" Zu erlernende Fähigkeiten</a>
 &blacktriangleright; <a href="#Hardware" erforderliche Hardware</a>
