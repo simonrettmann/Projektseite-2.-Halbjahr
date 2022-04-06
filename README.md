@@ -21,6 +21,7 @@
 &#9656; <a href="#Rückblick" Ausgangslage</a>
 &blacktriangleright; <a href="#Zielsetzung" Zielsetzung für das 2. Halbjahr</a>
 &blacktriangleright; <a href="#Lernen" Zu erlernende Fähigkeiten</a>
+&blacktriangleright; <a href="#Hardware" erforderliche Hardware</a>
 <b>Das Projekt</b> <br/>
 &blacktriangleright; <a href="#Arduino" Arduino</a>
 &blacktriangleright; <a href="#Website" Website, Datenbank, Sever</a>
@@ -31,6 +32,7 @@
 
 <h4> <a id="#Rückblick"> Ausgangslage</a></h4>
 <h4> <a id="#Zielsetzung"> Zielsetzung für das 2. Halbjahr </a>
+<h4> <a id="#Lernen"> Zu erlernende Fähigkeiten </a>
 <h4> <a id="#Lernen"> Zu erlernende Fähigkeiten </a>
 <h4> <a id="#Arduino"> Arduino </a>
 <h4> <a id="#Website"> Website, Dantenbank, Server </a>
