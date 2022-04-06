@@ -14,6 +14,8 @@
 <h4 align="left"> &#10132; <a href="https://www.youtube.com/channel/UCEljeGxqUxyXQlMq9Q-U8_w"> YouTube Kanal - Novum hotplate</a> </h4>
 </body>
 <hr>
+
+<img align="center" alt="Animation" width="700" height="400" src="https://user-images.githubusercontent.com/88385654/144711039-e3602339-827f-42a6-b684-b21d3ee8bcf1.gif">
 <body>
   
 <h2 align="center"> Inhaltsverzeichnis </h2>
