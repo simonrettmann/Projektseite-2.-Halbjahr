@@ -15,8 +15,8 @@
 <h3 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle"> Stundenprotokolle 1. Halbjahr</a> </h3> 
 <h3 align="left"> &#10132; <a href="https://www.youtube.com/channel/UCEljeGxqUxyXQlMq9Q-U8_w"> YouTube Kanal - Novum hotplate</a> </h3>
 </body>
-
-<h3 align="center"> Inhaltsverzeichnis </h3>
+<hr>
+<h2 align="center"> Inhaltsverzeichnis </h2>
 <b> 1. Allgemeines </b> <br/>
 &#9656; <a href="#Rückblick" Ausgangslage</a>
 &blacktriangleright; <a href="#Zielsetzung" Zielsetzung für das 2. Halbjahr</a>
@@ -28,7 +28,8 @@
 &blacktriangleright; <a href="Endprodukt" Das Endprodukt</a>
 <b>Reflexion</b> <br/>
 &blacktriangleright; <a href="#Reflexion" Reflexion des Projekts</a>
-</html>
+
+<hr>
 
 <h4> <a id="#Rückblick"> Ausgangslage</a></h4>
 <h4> <a id="#Zielsetzung"> Zielsetzung für das 2. Halbjahr </a>
