@@ -24,33 +24,33 @@
 <b> 1. Allgemeines </b>
 <br/>
 <ul>
-&#10148; <a href="#Rückblick"> Ausgangslage</a> <br/>
-&#10148; <a href="#Zielsetzung"> Zielsetzung für das 2. Halbjahr</a> <br/>
-&#10148; <a href="#Lernen"> Zu erlernende Fähigkeiten</a> <br/>
-&#10148; <a href="#Hardware"> erforderliche Hardware</a>
+&#10148; <a href="#Rückblick"> 1.1 Ausgangslage</a> <br/>
+&#10148; <a href="#Zielsetzung"> 1.2 Zielsetzung für das 2. Halbjahr</a> <br/>
+&#10148; <a href="#Lernen"> 1.3 Zu erlernende Fähigkeiten</a> <br/>
+&#10148; <a href="#Hardware"> 1.4 erforderliche Hardware</a>
 </ul>
   
 <b> 2. Das Projekt</b>
 <br/>
 <ul>
-&#10148; <a href="#Arduino"> Arduino</a> <br/>
-&#10148; <a href="#Website"> Website, Datenbank, Sever</a> <br/>
-&#10148; <a href="Endprodukt"> Das Endprodukt</a>
+&#10148; <a href="#Arduino"> 2.1 Arduino</a> <br/>
+&#10148; <a href="#Website"> 2.2 Website, Datenbank, Sever</a> <br/>
+&#10148; <a href="Endprodukt"> 2.3 Das Endprodukt</a>
 </ul>
   
 <b>Reflexion</b>
 <br/>
 <ul>
-&#10148; <a href="#Reflexion"> Reflexion des Projekts</a>
+&#10148; <a href="#Reflexion"> 3.1 Reflexion des Projekts</a>
 </ul>
 </body>
 <hr>
 
-<h4> <a id="#Rückblick"> Ausgangslage</a></h4>
-<h4> <a id="#Zielsetzung"> Zielsetzung für das 2. Halbjahr </a>
-<h4> <a id="#Lernen"> Zu erlernende Fähigkeiten </a>
-<h4> <a id="#Lernen"> Zu erlernende Fähigkeiten </a>
-<h4> <a id="#Arduino"> Arduino </a>
-<h4> <a id="#Website"> Website, Dantenbank, Server </a>
-<h4> <a id="#Endprodukt"> Das Endprodukt </a>
-<h4> <a id="#Relexion"> Reflexion des Projekts </a>
+<h4> <a id="#Rückblick"> 1.1 Ausgangslage</a></h4>
+<h4> <a id="#Zielsetzung"> 1.2 Zielsetzung für das 2. Halbjahr </a>
+<h4> <a id="#Lernen"> 1.3 Zu erlernende Fähigkeiten </a>
+<h4> <a id="#Hardware"> 1.4 erforderliche Hardware </a>
+<h4> <a id="#Arduino"> 2.1 Arduino </a>
+<h4> <a id="#Website"> 2.2 Website, Dantenbank, Server </a>
+<h4> <a id="#Endprodukt"> 2.3 Das Endprodukt </a>
+<h4> <a id="#Relexion"> 3.1 Reflexion des Projekts </a>
