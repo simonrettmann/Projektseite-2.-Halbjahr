@@ -27,7 +27,7 @@
 &#10148; <a href="#Rückblick"> 1.1 Ausgangslage</a> <br/>
 &#10148; <a href="#Zielsetzung"> 1.2 Zielsetzung für das 2. Halbjahr</a> <br/>
 &#10148; <a href="#Lernen"> 1.3 Zu erlernende Fähigkeiten</a> <br/>
-&#10148; <a href="#Hardware"> 1.4 erforderliche Hardware</a>
+&#10148; <a href="#Hardware"> 1.4 erforderliche Hardware</a> <br/>
 &#10148; <a href="#Software"> 1.5 verwendete Programme</a>
 </ul>
   
