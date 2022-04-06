@@ -25,7 +25,7 @@
 <br/>
 <ul>
 &#10148; <a href="#Rückblick"> 1.1 Ausgangslage</a> <br/>
-&#10148; <a href="#Zielsetzung"> 1.2 Zielsetzung für das 2. Halbjahr</a> <br/>
+&#10148; <a href="#Zielsetzung"> 1.2 Zielsetzung und Vision</a> <br/>
 &#10148; <a href="#Lernen"> 1.3 Zu erlernende Fähigkeiten</a> <br/>
 &#10148; <a href="#Hardware"> 1.4 erforderliche Hardware</a> <br/>
 &#10148; <a href="#Software"> 1.5 verwendete Programme</a>
@@ -68,10 +68,16 @@ Während der letzten Projektphase im 1. Halbjahr arbeitete die Gruppe an einem a
 </body>
 
 
-<h3> <a id="#Zielsetzung"> 1.2 Zielsetzung für das 2. Halbjahr </a></h3>
+<h3> <a id="#Zielsetzung"> 1.2 Zielsetzung und Vision </a></h3>
 
+Aufgrund der großen Begeisterung innerhalb der Gruppe für das Projekt, entschied sich die Gruppe auch im 2. Halbjahr am Gaskocher weiterzuarbeiten und diesen noch weiter zu verbessern. Neben der Idee des physical computings, die den Gruppenmitgliedern gut gefallen hat, wurde sich dazu entschieden im zweiten Halbjahr einen größeren Fokus auf die Software zu legen ohne dabei den Bezug zur Praxis zu verlieren, da die Software auf den Gaskocher angewendet werden sollte. Die Idee kam auf den Gaskocher von überall auf der Welt steuern zu können. Diese vielleicht etwas fernliegende Idee hat einen praktischen Hintergrund. Stellen Sie sich vor: Sie kommen von einem langen Tag nach Hause und Ihnen knurrt der Magen. Was gibt es da Schöneres als 20 Minuten vor Ankunft ganz entspannt von unterwegs seinen Herd anzustellen und den am Morgen darauf platzierten Topf mit Wasser zu erhitzen, sodass Sie nach Hause kommen und nur noch die Nudeln in das kochende Wasser geben müssen?
+Spinnt man dieses Gedankenexperiment weiter, wäre es natürlich für die tatsächliche Anwendung wichtig einen Not-Aus-Knopf zu haben, eine Webcam, die den Herd überwacht, einen selbstzündenden Gaskocher und eine interaktive Website mit live Wertemonitor. All diese Dinge sind potenzielle Weiterentwicklungsmöglichkeiten, sind aber nicht Ziel dieser Projektarbeit. 
+<br/>
+Ziel dieses Projekts ist es den im letzten Halbjahr erreichten Zwischenstand so weiterzuführen, dass die Temperatureingabe nicht nur über den rotary encoder, sondern auch über eine eigens dafür gebaute Website, erfolgen kann. Ein weiteres, aber weniger wichtiges Ziel ist die Erstellung eines Wertemonitors, sodass die Website interaktiv ist. Diese Dinge sollten spätestens bis zum 19.4.2022 erledigt sein. Sollte noch mehr Zeit sein, würde sich die Gruppe Zeit für die hardwaretechnische Umsetzung (Verlöten und sorgfältiges Verstauen) und das Einbauen einer elektronsichen Zündung machen. Letzteres bringt jedoch auch ein gewisses Brandrisiko und ist schwer umzusetzen, da es für den Arduino keinen Funkenwerfer oder ähnliche Teile gibt und so evt. mit Kurzschlüssen und Funkenflug gearbeitet werden müsste. 
 
 <h3> <a id="#Lernen"> 1.3 Zu erlernende Fähigkeiten </a></h3>
+
+Das Projekt war für die Gruppe großes Neuland. Daher war es besonders interessant, fordernd und spannend. Neben der Programmierung des Arduinos, der bereits gesteuert werden konnte, musste sich auch mit einem ESP, einem wlanfähigen Controller, einer Website (HTML, CSS), einer mySql-Datenbank und einen Server auseinandergesetzt werden. All dies sind unbedingt notwendige Schritte zu einem funktionierenden Endprodukt. 
 
 
 <h3> <a id="#Hardware"> 1.4 erforderliche Hardware </a></h3>
