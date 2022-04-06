@@ -57,7 +57,7 @@ Während der letzten Projektphase im 1. Halbjahr arbeitete die Gruppe an einem a
  
 <figure>
 <img alt="Schrittmotor" align="center" width="200" src="https://user-images.githubusercontent.com/88385654/162031011-f48fb0e4-3051-428b-b170-a0e1aee11551.jpg">
- <figcaption>Bild vom Schrittmotor auf der Gasflasche</figcaption>
+ <figcaption align="bottom">Bild vom Schrittmotor auf der Gasflasche</figcaption>
 </figure>
 
 
