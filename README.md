@@ -60,7 +60,7 @@ Während der letzten Projektphase im 1. Halbjahr arbeitete die Gruppe an einem a
  <b> Bild vom Schrittmotor auf der Gasflasche</b> <br/>
  <img alt="Schrittmotor" align="center" width="200" src="https://user-images.githubusercontent.com/88385654/162031011-f48fb0e4-3051-428b-b170-a0e1aee11551.jpg">
  <b> Bild vom Topf auf dem Gaskocher</b> <br/>
- <img alt="Gaskocher" width="200" src="https://user-images.githubusercontent.com/88385654/162033366-8405766e-8f9f-4c3a-960a-1e25023ee066.jpg">
+ <img alt="Gaskocher" align="right" width="200" src="https://user-images.githubusercontent.com/88385654/162033366-8405766e-8f9f-4c3a-960a-1e25023ee066.jpg">
 
  </details>
 </body>
