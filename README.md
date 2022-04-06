@@ -28,6 +28,7 @@
 &#10148; <a href="#Zielsetzung"> 1.2 Zielsetzung für das 2. Halbjahr</a> <br/>
 &#10148; <a href="#Lernen"> 1.3 Zu erlernende Fähigkeiten</a> <br/>
 &#10148; <a href="#Hardware"> 1.4 erforderliche Hardware</a>
+&#10148; <a href="#Software"> 1.5 verwendete Programme</a>
 </ul>
   
 <b> 2. Das Projekt</b>
@@ -58,6 +59,9 @@ Während der letzten Projektphase im 1. Halbjahr arbeitete die Gruppe an einem a
 
 
 <h3> <a id="#Hardware"> 1.4 erforderliche Hardware </a></h3>
+
+
+<h3> <a id="#Software"> 1.5 verwendete Programme</a></h3>
 
 
 <h3> <a id="#Arduino"> 2.1 Arduino </a></h3>
