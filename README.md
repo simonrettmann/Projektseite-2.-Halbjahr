@@ -1,6 +1,6 @@
 <html>
 <head>
-<h1 align="center"> Novum Hotplate 2.0 - Projektseite <img align="rigth" heigth="50" src="https://user-images.githubusercontent.com/88385654/161972724-293d9a41-47db-4963-bb9f-52ee7baace59.png"> </h1>
+<h1 align="center"> Novum Hotplate 2.0 - Projektseite </h1>
 
 <h2 align="center"> Der arduinogesteuerte Gaskocher mit Websteuerung </h2>
 </head>
