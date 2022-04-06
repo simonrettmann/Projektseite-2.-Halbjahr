@@ -23,15 +23,17 @@
 <b> 1. Allgemeines </b>
 <br/>
 &#10148; <a href="#Rückblick"> Ausgangslage</a>
-&blacktriangleright; <a href="#Zielsetzung" Zielsetzung für das 2. Halbjahr</a>
-&blacktriangleright; <a href="#Lernen" Zu erlernende Fähigkeiten</a>
-&blacktriangleright; <a href="#Hardware" erforderliche Hardware</a>
-<b>Das Projekt</b> <br/>
-&blacktriangleright; <a href="#Arduino" Arduino</a>
-&blacktriangleright; <a href="#Website" Website, Datenbank, Sever</a>
-&blacktriangleright; <a href="Endprodukt" Das Endprodukt</a>
-<b>Reflexion</b> <br/>
-&blacktriangleright; <a href="#Reflexion" Reflexion des Projekts</a>
+&#10148; <a href="#Zielsetzung"> Zielsetzung für das 2. Halbjahr</a>
+&#10148; <a href="#Lernen"> Zu erlernende Fähigkeiten</a>
+&#10148; <a href="#Hardware"> erforderliche Hardware</a>
+<b>Das Projekt</b>
+<br/>
+&#10148; <a href="#Arduino"> Arduino</a>
+&#10148; <a href="#Website"> Website, Datenbank, Sever</a>
+&#10148; <a href="Endprodukt"> Das Endprodukt</a>
+<b>Reflexion</b>
+<br/>
+&#10148; <a href="#Reflexion"> Reflexion des Projekts</a>
 
 <hr>
 
