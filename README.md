@@ -8,11 +8,31 @@
 <h3 align="left"> Stormarnschule Ahrensburg <br/> Informatik, Bl <br/> Schuljahr 2021/22, 2. Halbjahr </br> </h3>
 
 <br/>
+
+<body>
 <h3 align="left"> &#10132; <a href="https://github.com/simonrettmann/Projektseite"> Projektseite 1. Halbjahr</a> </h3> 
 <h3 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle-2.-Halbjahr"> Stundenprotokolle 2. Halbjahr</a> </h3> 
 <h3 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle"> Stundenprotokolle 1. Halbjahr</a> </h3> 
 <h3 align="left"> &#10132; <a href="https://www.youtube.com/channel/UCEljeGxqUxyXQlMq9Q-U8_w"> YouTube Kanal - Novum hotplate</a> </h3>
+</body>
 
-
-
+<h3 align="center"> Inhaltsverzeichnis </h3>
+1. Allgemeines
+&blacktriangleright; <a href="#Rückblick" Ausgangslage</a>
+&blacktriangleright; <a href="#Zielsetzung" Zielsetzung für das 2. Halbjahr</a>
+&blacktriangleright; <a href="#Lernen" Zu erlernende Fähigkeiten</a>
+2. Das Projekt
+&blacktriangleright; <a href="#Arduino" Arduino</a>
+&blacktriangleright; <a href="#Website" Website, Datenbank, Sever</a>
+&blacktriangleright; <a href="Endprodukt" Das Endprodukt</a>
+3. Reflexion
+&blacktriangleright; <a href="#Reflexion" Reflexion des Projekts</a>
 </html>
+
+<h4> <a id="#Rückblick"> Ausgangslage</a></h4>
+<h4> <a id="#Zielsetzung"> Zielsetzung für das 2. Halbjahr </a>
+<h4> <a id="#Lernen"> Zu erlernende Fähigkeiten </a>
+<h4> <a id="#Arduino"> Arduino </a>
+<h4> <a id="#Website"> Website, Dantenbank, Server </a>
+<h4> <a id="#Endprodukt"> Das Endprodukt </a>
+<h4> <a id="#Relexion"> Reflexion des Projekts </a>
