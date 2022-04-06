@@ -7,8 +7,6 @@
   <h3 align="left"> Ein Projekt von David Borgmann und Simon Rettmann</h3>
 <h3 align="left"> Stormarnschule Ahrensburg <br/> Informatik, Bl <br/> Schuljahr 2021/22, 2. Halbjahr </br> </h3>
 
-<br/>
-
 <body>
 <h4 align="left"> &#10132; <a href="https://github.com/simonrettmann/Projektseite"> Projektseite 1. Halbjahr</a> </h4> 
 <h4 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle-2.-Halbjahr"> Stundenprotokolle 2. Halbjahr</a> </h4> 
