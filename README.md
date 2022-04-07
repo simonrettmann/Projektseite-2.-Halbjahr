@@ -85,13 +85,14 @@ Konkret mussten folgende Dinge erlernt werden.
  <li> Einarbeitung in css, damit man Design und Inhalt in Kombination mit einer html-Website trennen kann</li>
  <li> Einarbeitung in php, damit über ein Eingabefeld auf der Website generierte Werte an eine Datenbank gesendet werden können und von dem Arduino ausgelesen werden können</li>
  <li> Einarbeitung in sql zur Erstellung einer mysql-Datenbank</li>
+ </ul>
  
  Neben diesen Fähigkeiten, die sich angeeignet werden mussten, mussten im Vorhinein auch ein paar organisatorische Dinge erledigt werden. 
  <ul>
   <li>die erforderliche <a href="#Hardware">Hardware</a> musste angeschafft werden</li>
   <li>
 
-
+</ul>
 <h3> <a id="#Hardware"> 1.4 erforderliche Hardware </a></h3>
 
 
