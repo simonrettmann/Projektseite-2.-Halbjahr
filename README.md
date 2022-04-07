@@ -314,6 +314,7 @@ Allerdings funktionierte das input-Feld noch nicht, dafür musste erst das passe
 
 <details>
  <summary>config.php</summary>
+
  ```
  <?php
 
@@ -340,9 +341,11 @@ header("location:index.php")
 ?>
 ```
 </details>
+
 <details>
  <summary>Screenshot der Datenbank</summary>
 <img src="https://user-images.githubusercontent.com/88385654/162234026-015ea17f-364c-419d-9ecd-68ea77ffab41.png">
+ 
 </details>
 
 <hr>
