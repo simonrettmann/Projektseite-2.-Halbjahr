@@ -579,7 +579,9 @@ Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code un
 
 <details>
 	<summary>updateDBLED.php</summary>
+	
 ```
+	
 <?php     
   require 'database.php';
   
@@ -596,7 +598,9 @@ Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code un
     header("Location: index.php");
   }
 ?>
+	
 ```
+	
 </details>
 
 <details>
