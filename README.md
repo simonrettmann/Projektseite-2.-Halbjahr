@@ -98,6 +98,9 @@ Bezüglich des Serverplatzes und des Datenbankzugangs wurde der Tipp von Herrn B
 <br/>
 Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmiersprachen wurde verschiedene Quellen zu Rate gezogen.
 
+<details>
+ <summary>Quellenverzeichnis</summary>
+ 
 <b>Erstellung der Website</b>
 <ul>
  <li>https://youtu.be/qmTNnZCDJY0https://youtu.be/qmTNnZCDJY0</li>
@@ -134,6 +137,7 @@ Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmierspra
 
 <b> Kommunikation zwischen Datenbank und ESP</b>
 
+</details>
 <h3> <a id="#Hardware"> 1.4 erforderliche Hardware </a></h3>
 
 <h3> <a id="#Software"> 1.5 verwendete Programme</a></h3>
