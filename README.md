@@ -437,6 +437,7 @@ foreach($pdo->query($sql)as $row){
  echo $temperatur; 
 }
 ?>
+	
 ```
 </details>
 
