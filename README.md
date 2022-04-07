@@ -41,7 +41,7 @@
 &#10148; <a href="#endprodukt"> 2.4 Das Endprodukt</a>
 </ul>
   
-<b>Reflexion</b>
+<b> 3. Reflexion</b>
 <br/>
 <ul>
 &#10148; <a href="#reflexion"> 3.1 Reflexion des Projekts</a>
