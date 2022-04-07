@@ -96,6 +96,43 @@ Konkret mussten folgende Dinge erlernt werden.
 <br/>
 Bezüglich des Serverplatzes und des Datenbankzugangs wurde der Tipp von Herrn Buhl gegeben sich mit Herrn Andy Adiwidjaja in Verbindung zu setzen, da dieser schon seit längerer Zeit Stormarnschüler bei ihren Informatikprojekten unterstützt. Nach kurzer E-Mailkorrespondenz stellte Herr Adiwidjaja netterweise sowohl Serverplatz mit einer Website (erreichbar unter http://gaskocher.stormarnschueler.de/index.php), als auch einen Datenbankzugang zur Verfügung. Vielen Dank auch an dieser Stelle für die Hilfsbereitschaft, da das Projekt ohne diese Hilfe nicht möglich gewesen wäre. 
 <br/>
+Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmiersprachen wurde verschiedene Quellen zu Rate gezogen.
+
+<b>Erstellung der Website</b>
+<ul>
+ <li>https://youtu.be/qmTNnZCDJY0https://youtu.be/qmTNnZCDJY0</li>
+ <li>https://wiki.selfhtml.org/wiki/HTML/Tutorials</li>
+ <li>https://www.html-seminar.de/erste-html-seite.htm</li>
+ <li>https://docs.microsoft.com/de-de/learn/modules/build-simple-website/</li>
+ <li>http://www.css-lernen.net/css-grundlagen.html</li>
+ <li>https://youtu.be/RI2niB0kJFA</li>
+ <li>https://www.mediaevent.de/html/input.html</li>
+</ul>
+
+<b> Hosten eines Servers</b>
+<ul>
+ <li>https://www.exone.de/ratgeber/der-server-einfach-erklaert/</li>
+ <li>https://hartmut.homelinux.org/Linux/Server-Praxis.html</li>
+ </ul>
+ 
+<b> Grundlagen von php</b>
+<ul>
+ <li>https://www.php.net/manual/de/intro-whatis.php</li>
+ <li>https://www.php-einfach.de</li>
+ <li>https://wiki.selfhtml.org/wiki/PHP</li>
+ <li>https://www.php-kurs.com/erstes-php-programm.htm</li>
+</ul>
+
+<b>mysql-Datenbank</b>
+<ul>
+ <li>https://www.mysql.com/de/</li>
+ <li>https://www.datenbanken-verstehen.de/sql-tutorial/</li>
+ <li>https://kinsta.com/de/wissensdatenbank/was-ist-mysql/</li>
+</ul>
+
+<b>Kommunikation zwischen ESP und Arduino</b>
+
+<b> Kommunikation zwischen Datenbank und ESP</b>
 
 <h3> <a id="#Hardware"> 1.4 erforderliche Hardware </a></h3>
 
