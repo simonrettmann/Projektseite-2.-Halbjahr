@@ -182,9 +182,7 @@ Fritzing ist ein Programm zur Digitalisierung von Schaltplänen. Das Programm wu
 Auch dieses Halbjahr wurde der Arduino mit dem eigenen Codeeditor viel genutzt. 
 <details>
  <summary>Arduino - Bilder </summary>
-<img src="="https://user-images.githubusercontent.com/88385654/162223731-b526657f-9fbc-44f2-90b0-40e76a443f68.png">
-                                                                                                                  
-</details>
+<img src="https://user-images.githubusercontent.com/88385654/162223731-b526657f-9fbc-44f2-90b0-40e76a443f68.png">                                       </details>
 
 <h3> <a id="#Arduino"> 2.1 Arduino </a></h3>
 
