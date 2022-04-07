@@ -640,6 +640,279 @@ Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code un
 
 <h3> <a id="endprodukt"> 2.4 Das Endprodukt </a></h3>
 
+Nach langer Einarbeitungsphase und vielen Stunden des Debuggings steht nun ein funktionstüchtiges Endprodukt. Es gibt eine öffentlich zugängliche Website, auf der man Werte über ein input-Feld eintragen kann. Diese Werte werden an eine dafür eingerichtete Datenbank gesendet und dort in einer Tabelle gespeichert. Auch ohne Kontakt zu einem Computer kann ein ESP auf die Datenbank zugreifen und die Werte auslesen. Demensprechend ist unser Endprodukt nur strom- und wlan- allerdings nicht computerabhängig. Der ESP gibt die Werte an den Arduino weiter, der aufgrund von eingestellter und gemessener Temperatur eine Differenz bildet und über eine Funktion diese Differenz in eine prozentuale Öffnung des Gaskochers umrechnet. Die Öffnung des Ventils geschieht über einen Schrittmotor. Die eingestellte und gemessene Temperatur wird über ein LC-Display ausgegeben. Da die Verrechnung von eingestellter und gemessener Temperatur immer wieder passiert und die Funktion sehr präzise ist, gelingt es sich einem Temperaturwert zu nähern und diesen weitestgehend zu halten.
+Die softwaretechnischen Voraussetzungen sind erfüllt, sodass der Arduino theoretisch die gemessene Temperatur und die prozentuale Öffnung des Ventils an die Website schicken könnte. Leider klappt dies aufgrund der Instabilität des ESPs nicht.
+
+<details>
+	<summary>Video zum Endprodukt</summary>
+<a href="https://www.youtube.com/watch?v=ZekT9gXA-Eo"><img src="https://user-images.githubusercontent.com/88385654/162266251-90478a47-8a7e-4983-9f2e-75f7b61711ad.png"></a>
+</details>
+
+<details>
+	<summary>index.php</summary>
+
+```
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>Arduinogesteuerter Gaskocher</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+       <h1 class="überschrift">Arduinogesteuerter Gaskocher</h1>
+       <h2 class="überschrift2"> Steuerzentrale</h2>
+
+       
+        <div id="square"></div>
+
+        <img id="bild1" src="/IMG_1042.jpg">
+        <img id="bild2" src="/IMG_1966.jpg">
+
+        <p class="text"> 
+                Geben Sie hier die gewünschte Temperatur in °C ein:
+        </p>
+
+
+        <form action="formular.php" method="post">
+            <input class="eingabefeld" type="number" name="temperatureingabe" step="1" max="300" min="0">
+            <input type="submit">
+        </form>
+
+        <?php require("config.php") ?>
+
+
+        <?php
+        require("tabelle.php")
+        ?>
+    </body>
+</html>
+```
+</details>
+
+<details>
+	<summary>stylesheet.css</summary>
+
+```
+.überschrift {
+    font-size: 48pt;
+    color:black;
+    text-align: center;
+}
+
+.überschrift2 {
+font-size: 30pt;
+color: black;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.square {
+width: 300pt;
+height: 300pt;
+background: white;
+border: 10pt solid;
+border-color: black;
+}
+
+#bild1 {
+width: 150px;
+height: 200px;
+float: right;
+border: 2px solid black;
+margin-left: 10px;
+margin-top: -100px;
+margin-right: 10px;
+}
+
+#bild2 {
+width: 150px;
+height: 200px;
+float: right;
+border: 2px solid black;
+margin-top: -100px;
+}
+
+.text {
+  color: black;
+  font-size: 23px;
+  font-family:'Times New Roman', Times, serif;
+  margin-left: 2px;
+}
+
+.eingabefeld {
+width: 100px;
+border:  2px solid black;
+text-align: center;
+background-color: rgb(185, 185, 185);
+margin-left: 10px;
+}
+
+table, th, td, caption {
+  border: thin solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 50px;
+}
+	
+```
+	
+</details>
+
+<details>
+	<summary>database.php</summary>
+
+```
+<?php
+	class Database {
+		private static $dbName = 'sschuelersql4' ;
+		private static $dbHost = 'localhost' ;
+		private static $dbUsername = 'sschuelersql4';
+		private static $dbUserPassword = 'lycquzesjb';
+		 
+		private static $cont  = null;
+		 
+		public function __construct() {
+			die('Init function is not allowed');
+		}
+		 
+		public static function connect() {
+		  // One connection through whole application
+		  if ( null == self::$cont ) {     
+        try {
+          self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword); 
+        }
+        catch(PDOException $e) {
+          die($e->getMessage()); 
+        }
+		  }
+		  return self::$cont;
+		}
+		 
+		public static function disconnect() {
+			self::$cont = null;
+		}
+	}
+?>
+```
+	
+</details>
+
+<details>
+	<summary>formular.php</summary>
+```
+<?php
+ $eintemperatur = $_POST["temperatureingabe"]; //Werte des Eingabefelds auf der Website werden als Variable definiert
+echo $eintemperatur; //Werte werden zur Kontrolle ausgegeben
+
+require("config.php"); //Zugangsdaten der Datenbank
+
+$statement = $pdo ->prepare("INSERT INTO gaskocher(eintemperatur) values (?)"); //über die prepare und execute Funktion werden die Daten in die passende Tabelle (gaskocher) und Spalte (eintemperatur) eingefügt
+$statement->execute(array($eintemperatur));
+
+header("location:index.php")
+
+?>
+```
+</details>
+
+<details>
+	<summary>GetData.php</summary>
+```
+<?php
+
+  $dbName = 'sschuelersql4';
+  $dbHost = 'localhost';
+  $dbUsername = 'sschuelersql4';
+  $dbUserPassword = 'lycquzesjb';
+ $pdo = new PDO( "mysql:host=$dbHost;dbname=$dbName", $dbUsername, $dbUserPassword); //Verbindung mit der Datenbank
+
+  $sql = 'SELECT * FROM gaskocher  WHERE   ID = (SELECT max(ID) From gaskocher)'; //Wert mit der höchsten ID wird aus der Tabelle Gaskocher ausgelesen
+  foreach ($pdo->query($sql) as $row) {
+    echo $row['eintemperatur'];
+  }
+?>
+```
+	
+</details>
+
+<details>
+	<summary>config.php</summary>
+```
+	
+<?php
+
+$pdo = new PDO('mysql:host=localhost;dbname=sschuelersql4', 'sschuelersql4', 'lycquzesjb');
+
+?>
+```
+</details>
+
+<details>
+	<summary>tabelle.php</summary>
+```
+<?php
+
+$sql = "SELECT * FROM gaskocher WHERE   ID = (SELECT max(ID) From gaskocher)";
+?>
+
+
+<?php
+foreach($pdo->query($sql)as $row){
+ $temperatur = $row['eintemperatur'];
+ echo $temperatur; 
+}
+?>
+```
+</details>
+
+<details>
+	<summary>connect.php</summary>
+	
+```
+<html>
+<body>
+
+<?php
+
+$dbname = 'sschuelersql4';
+$dbuser = 'sschuelersql4';  
+$dbpass = 'lycquzesjb'; 
+$dbhost = 'localhost'; 
+
+$connect = @mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+
+if(!$connect){
+	echo "Error: " . mysqli_connect_error();
+	exit();
+}
+
+echo "Connection Success!<br><br>";
+
+$temperature = $_GET["temperature"];
+$humidity = $_GET["humidity"]; 
+
+
+$query = "INSERT INTO wertemonitor (temperature, humidity) VALUES ('$temperature', '$humidity')";
+$result = mysqli_query($connect,$query);
+
+echo "Insertion Success!<br>";
+
+?>
+</body>
+</html>
+```
+	
+</details>
+
+<details>
+	<summary>Bildergalerie</summary>
+
+</details>
+
 <hr>
 
 <h3> <a id="relexion"> 3.1 Reflexion des Projekts </a></h3>
