@@ -76,6 +76,9 @@ Spinnt man dieses Gedankenexperiment weiter, wäre es natürlich für die tatsä
 <br/>
 Ziel dieses Projekts ist es den im letzten Halbjahr erreichten Zwischenstand so weiterzuführen, dass die Temperatureingabe nicht nur über den rotary encoder, sondern auch über eine eigens dafür gebaute Website, erfolgen kann. Ein weiteres, aber weniger wichtiges Ziel ist die Erstellung eines Wertemonitors, sodass die Website interaktiv ist. Diese Dinge sollten spätestens bis zum 19.4.2022 erledigt sein. Sollte noch mehr Zeit sein, würde sich die Gruppe Zeit für die hardwaretechnische Umsetzung (Verlöten und sorgfältiges Verstauen) und das Einbauen einer elektronsichen Zündung machen. Letzteres bringt jedoch auch ein gewisses Brandrisiko und ist schwer umzusetzen, da es für den Arduino keinen Funkenwerfer oder ähnliche Teile gibt und so evt. mit Kurzschlüssen und Funkenflug gearbeitet werden müsste. 
 
+<img alt="Übersichtsskizze" src="![IMG_1334](https://user-images.githubusercontent.com/88385654/162335480-27590c81-ecdf-4a94-a0be-b45e95934eac.jpg">
+
+
 <h3> <a id="lernen"> 1.3 erforderliche Fähigkeiten und Vorbereitungen</a></h3>
 
 Das Projekt war für die Gruppe großes Neuland. Genau dieser Umstand begeisterte die Gruppe und machte das Projekt interessant und arbeitsaufwendig. Neben der Programmierung des Arduinos, der bereits gesteuert werden konnte, musste sich auch mit einem ESP, einem wlanfähigen Controller, einer Website (HTML, CSS), einer mySql-Datenbank und einen Server auseinandergesetzt werden. Da es sich hierbei um ein relativ komplexes Projekt handelt, müssen alle Schritte funktionieren und zusammenarbeiten oder das Projekt ist nicht erfolgreich. Dies stellt eine neute Situation für die Gruppe dar, da Software wenig handlungsspielraum lässt und das für Hardware typische "Pfuschen" nicht funktioniert. 
@@ -803,6 +806,13 @@ Die softwaretechnischen Voraussetzungen sind erfüllt, sodass der Arduino theore
 <details>
 	<summary>Video zum Endprodukt</summary>
 <a href="https://www.youtube.com/watch?v=ZekT9gXA-Eo"><img src="https://user-images.githubusercontent.com/88385654/162266251-90478a47-8a7e-4983-9f2e-75f7b61711ad.png"></a>
+</details>
+
+<details>
+	<summary>Übersichtsskizze</summary>
+	
+<img src="https://user-images.githubusercontent.com/88385654/162335381-01b1191d-fb1b-463f-a06a-f6e42d10cb77.jpg">
+
 </details>
 
 <details>
