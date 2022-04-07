@@ -824,6 +824,7 @@ header("location:index.php")
 
 <details>
 	<summary>GetData.php</summary>
+	
 ```
 <?php
 
@@ -838,12 +839,14 @@ header("location:index.php")
     echo $row['eintemperatur'];
   }
 ?>
+	
 ```
 	
 </details>
 
 <details>
 	<summary>config.php</summary>
+	
 ```
 	
 <?php
@@ -851,11 +854,14 @@ header("location:index.php")
 $pdo = new PDO('mysql:host=localhost;dbname=sschuelersql4', 'sschuelersql4', 'lycquzesjb');
 
 ?>
+	
 ```
+	
 </details>
 
 <details>
 	<summary>tabelle.php</summary>
+	
 ```
 <?php
 
@@ -869,7 +875,9 @@ foreach($pdo->query($sql)as $row){
  echo $temperatur; 
 }
 ?>
+	
 ```
+	
 </details>
 
 <details>
