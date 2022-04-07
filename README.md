@@ -136,8 +136,19 @@ Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmierspra
 </ul>
 
 <b>Kommunikation zwischen ESP und Arduino</b>
+<ul>
+<li>https://forum.arduino.cc/t/esp8266-kommunikation-mit-dem-arduino/571608</li>
+<li>https://dronebotworkshop.com/i2c-arduino-arduino/</li>
+<li>http://fmh-studios.de/</li>
+<li>https://www.arduino.cc/reference/de/language/variables/data-types/array/</li>
+</ul>
 
 <b> Kommunikation zwischen Datenbank und ESP</b>
+<ul>
+<li>https://www.mikrocontroller.net/topic/461310</li>
+<li>https://randomnerdtutorials.com/esp32-esp8266-mysql-database-php/</li>
+<li>https://steinlaus.de/super-simpler-esp32-nach-mysql-datenlogger/</li>
+</ul>
 
 </details>
 <h3> <a id="hardware"> 1.4 erforderliche Hardware </a></h3>
