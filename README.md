@@ -155,7 +155,15 @@ Visual Studio Code ist ein kostenloser Quelltexteditor und ist in der Informatik
 
 </details>
 
+<img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162218087-85a6771b-7c7f-43be-9c90-dd594e06b684.png">
+<b>CyberDuck</b><br/>
+CyberDuck ist ein kostenloser FTP-Client, der den Zugriff auf Sever ermöglicht. So wird ermöglicht, dass lokal gespeicherte und erstellte Dokumente auf den Server geladen werden können.
 
+<details>
+ <summary>CyberDuck - Bilder</summary>
+<img src="https://user-images.githubusercontent.com/88385654/162220411-d2c8a4f6-9dbb-4031-9ddd-2a1b77940fe8.png">
+<img src="https://user-images.githubusercontent.com/88385654/162220425-b921302c-cec1-4d54-8069-3a19cdbee3dc.png">
+</details>
 
 
 <h3> <a id="#Arduino"> 2.1 Arduino </a></h3>
