@@ -165,8 +165,26 @@ CyberDuck ist ein kostenloser FTP-Client, der den Zugriff auf Sever ermöglicht.
  <summary>CyberDuck - Bilder</summary>
 <img src="https://user-images.githubusercontent.com/88385654/162220411-d2c8a4f6-9dbb-4031-9ddd-2a1b77940fe8.png"><br/>
 <img src="https://user-images.githubusercontent.com/88385654/162220425-b921302c-cec1-4d54-8069-3a19cdbee3dc.png">
+ 
 </details>
 
+<img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162222149-c9971214-9a89-4cd0-8eec-5c60f0df86a6.png">
+<b>Fritzing</b><br/>
+Fritzing ist ein Programm zur Digitalisierung von Schaltplänen. Das Programm wurde sich bereits während der letzten Projektphase gekauft und auch dieses Halbjahr, wenn auch deutlich weniger, benutzt.
+<details>
+ <summary>Fritzing - Bilder</summary>
+<img src="https://user-images.githubusercontent.com/88385654/162222942-a2534ad8-fa7f-46db-8d3e-05522e736223.png">
+
+</details>
+
+<img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162223091-b2dca110-6384-422f-9708-bbe419281338.png">
+<b>Arduino</b><br/>
+Auch dieses Halbjahr wurde der Arduino mit dem eigenen Codeeditor viel genutzt. 
+<details>
+ <summary>Arduino - Bilder </summary>
+<img src="="https://user-images.githubusercontent.com/88385654/162223731-b526657f-9fbc-44f2-90b0-40e76a443f68.png">
+                                                                                                                  
+</details>
 
 <h3> <a id="#Arduino"> 2.1 Arduino </a></h3>
 
