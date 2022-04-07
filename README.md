@@ -322,6 +322,33 @@ void sendeWerte(){                            //eingestellteTemp wird via I2C an
 
 </details>
 	
+Bei „rufeWertAb();“ werden die Daten angefragt und empfangen, welche durch die „antwortfunktion()“ des „Slaves“ übermittelt wurden. Hier ist es die Aufgabe des „Masters“ die Daten zu decodieren, um diese anschließend weiterzuverarbeiten.
+
+<details>
+	<summary>rufeWertAb();</summary>
+
+```c
+	
+void rufeWertAb() {                           //Werte werden vom Arduino abgefragt
+ 
+  byte buf[5];
+ 
+  int n = Wire.requestFrom(10, 6);            //es werden 6 Bytes vom Arduino (Slave-Adresse 10) abgefragt
+  for ( int i = 0; i < n; i++)
+  {
+    buf[i] = Wire.read();                     //empfangene Bytes werden als Array zwischengespeichert
+  }
+  gemesseneTempInt = setzeZahlZusammen(buf[1] , buf[0]);    //Jeweil ein Paar (immer 2) von den Bytes werden zu Integer-Variablen zusammengesetzt
+  eingestellteTemp = setzeZahlZusammen(buf[3] , buf[2]);
+  pVentilInt = setzeZahlZusammen(buf[5] , buf[4]);
+  tatTemp = (float)gemesseneTempInt /100 ;                  //Integers werden in Floats umgewandelt
+  pVentil = (float)pVentilInt /100 ;
+}	
+	
+```
+	
+</details>
+	
 <h3> <a id="website"> 2.2 Website, Dantenbank, Server </a></h3>
 
 Zuerst wurde eine recht simple Website mit Hilfe von html und ein wenig css erstellt. Dafür wurde bei visual studio code eine index.html - Datei und ein stylesheet.css angelegt. Die Website ist absichtlich sehr simpel gehalten und soll vor allen Dingen funktional sein. Die beiden Bilder auf der rechten Seite sind eine kleine Spielerei und sollen an das Layout der Stundenprotokolle erinnern. Da die Website als Steuerzentrale funktionieren soll, befindet sich dort ein html-input Feld. Über das Feld können verschiedene Dinge wie Typ, Maximalwert, Minimalwert und Ausgangswert eingestellt werden. Um ein einheitliches und ansprechendes Design zu erreichen wurden mit Hilfe von dem stylesheet Ramen und andere Verschönerung programmiert. Diese Schritte funktionierten nach einer Einarbeitungsphase relativ problemlos und schnell. 
@@ -435,6 +462,7 @@ table, th, td, caption {
   margin-right: 10px;
   margin-top: 50px;
 }
+	 
 ```
  
 </details>
