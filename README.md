@@ -5,7 +5,7 @@
 
 <h2 align="center"> Der arduinogesteuerte Gaskocher mit Websteuerung </h2>
 </head>
-<img align="right" alt="Animation" width="500" height="300" src="https://user-images.githubusercontent.com/88385654/144711039-e3602339-827f-42a6-b684-b21d3ee8bcf1.gif">
+<img align="right" alt="Animation" width="500" height="300" src="https://user-images.githubusercontent.com/88385654/162214959-08398ea4-f3ca-4dee-871f-ff785f1c03f4.gif">
 <h4 align="left"> Ein Projekt von David Borgmann und Simon Rettmann</h4>
 <h4 align="left"> Stormarnschule Ahrensburg <br/> Informatik, Bl <br/> Schuljahr 2021/22, 2. Halbjahr </br> </h4>
 
