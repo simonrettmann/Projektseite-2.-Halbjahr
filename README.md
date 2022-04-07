@@ -270,6 +270,31 @@ int setzeZahlZusammen(unsigned int high, unsigned int low) {        //Funktion, 
 
 </details>
 
+Des Weiteren wird die „antwortfunktion()“ ausgelöst, wenn vom „Master“ Daten gefordert werden. Hierbei werden zunächst alle wichtigen Variablen der Kennwerte des Gaskocherzustands in Bytes zerlegt und anschließend byteweise an den „Master“ übertragen. Zu beachten ist, dass Float-Variablen (Kommazahlen mit 2 Nachkommastellen) zunächst mit 100 multipliziert und anschließend in eine Integer-Variable umgewandelt werden. Nach der Übertragung wird der Prozess rückgängig gemacht, wobei keine Informationen verloren gehen. Da Float-Variablen aus 4 Bytes bestehen, könnte es ansonsten zu Schwierigkeiten durch eine Veränderung des vorher gewählten 2-Byte-Leserasters kommen. 
+Als Folge der Kommunikation sind alle Kennzahlen auf dem „Master“ und auf dem „Slave“ synchron.
+
+<details>
+	<summary>antwortfunktion()</summary>
+	
+```c
+	
+void antwortfunktion(){            //eintreffende Aufforderung zur Datenübertragung wird verarbeitet
+  byte buffer[6];
+ 
+  buffer[0] = lowByte(gemesseneTemperaturInt);        //Variablen werden in Bytes zerlegt und in einem Array zwischengespeichert
+  buffer[1] = highByte(gemesseneTemperaturInt);         
+  buffer[2] = lowByte(eingestellteTemp);
+  buffer[3] = highByte(eingestellteTemp);
+  buffer[4] = lowByte(pVentilInt);
+  buffer[5] = highByte(pVentilInt);
+   
+  Wire.write( buffer, 6);                             //Daten des Arrays werden byteweise übertragen
+}
+
+```
+	
+</details>
+
 
 <h3> <a id="website"> 2.2 Website, Dantenbank, Server </a></h3>
 
