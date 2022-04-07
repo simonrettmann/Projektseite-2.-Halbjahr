@@ -163,9 +163,17 @@ Nicht mehr verwendet wird der rotary encoder, da die Einstellung der Temperatur 
 <details>
 	<summary>Bildergalerie</summary>
 <b>Arduino Uno</b> <img src="https://user-images.githubusercontent.com/88385654/162329333-18241b43-b320-4245-8aca-39932448ed29.jpg">
+<br/>
+<br/>
 <b>NodeMCU</b> <img src="https://user-images.githubusercontent.com/88385654/162329415-50b0d213-f8b5-42c4-8eb5-f158721e6df4.jpg">
+<br/>
+<br/>
 <b>Thermoelement MAX6675</b> <img src="https://user-images.githubusercontent.com/88385654/162329561-a4f05024-65e1-4b3d-93e7-5a1e04912812.jpg">
+<br/>
+<br/>
 <b>LC-Display</b> <img src="https://user-images.githubusercontent.com/88385654/162329629-399847d7-35d3-474c-8287-7dca34646fca.jpg">
+<br/>
+<br/>
 <b>Schrittmotor</b> <img src="https://user-images.githubusercontent.com/88385654/162329800-4a22aaa4-93aa-42f2-a44f-57672c1de31d.jpg">
 </details>
 
