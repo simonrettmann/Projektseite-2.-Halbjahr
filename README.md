@@ -444,9 +444,7 @@ foreach($pdo->query($sql)as $row){
 </details>
 
 <details>
-	<summary>connect.php</summary>
-```
-	
+	<summary>connect.php</summary>	
 <html>
 <body>
 
@@ -478,8 +476,6 @@ echo "Insertion Success!<br>";
 ?>
 </body>
 </html>
-	
-```
 	
 </details>
 
