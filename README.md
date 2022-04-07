@@ -29,6 +29,7 @@
 &#10148; <a href="#lernen"> 1.3 erforderliche Fähigkeiten und Vorbereitungen</a> <br/>
 &#10148; <a href="#hardware"> 1.4 erforderliche Hardware</a> <br/>
 &#10148; <a href="#software"> 1.5 verwendete Programme</a>
+&#10148; <a href="#planung"> 1.6 Projektplanung</a>
 </ul>
   
 <b> 2. Das Projekt</b>
@@ -75,8 +76,6 @@ Aufgrund der großen Begeisterung innerhalb der Gruppe für das Projekt, entschi
 Spinnt man dieses Gedankenexperiment weiter, wäre es natürlich für die tatsächliche Anwendung wichtig einen Not-Aus-Knopf zu haben, eine Webcam, die den Herd überwacht, einen selbstzündenden Gaskocher und eine interaktive Website mit live Wertemonitor. All diese Dinge sind potenzielle Weiterentwicklungsmöglichkeiten, sind aber nicht Ziel dieser Projektarbeit. 
 <br/>
 Ziel dieses Projekts ist es den im letzten Halbjahr erreichten Zwischenstand so weiterzuführen, dass die Temperatureingabe nicht nur über den rotary encoder, sondern auch über eine eigens dafür gebaute Website, erfolgen kann. Ein weiteres, aber weniger wichtiges Ziel ist die Erstellung eines Wertemonitors, sodass die Website interaktiv ist. Diese Dinge sollten spätestens bis zum 19.4.2022 erledigt sein. Sollte noch mehr Zeit sein, würde sich die Gruppe Zeit für die hardwaretechnische Umsetzung (Verlöten und sorgfältiges Verstauen) und das Einbauen einer elektronsichen Zündung machen. Letzteres bringt jedoch auch ein gewisses Brandrisiko und ist schwer umzusetzen, da es für den Arduino keinen Funkenwerfer oder ähnliche Teile gibt und so evt. mit Kurzschlüssen und Funkenflug gearbeitet werden müsste. 
-
-<img alt="Übersichtsskizze" src="https://user-images.githubusercontent.com/88385654/162335480-27590c81-ecdf-4a94-a0be-b45e95934eac.jpg">
 
 
 <h3> <a id="lernen"> 1.3 erforderliche Fähigkeiten und Vorbereitungen</a></h3>
@@ -221,7 +220,10 @@ Nicht mehr verwendet wird der rotary encoder, da die Einstellung der Temperatur 
  <summary>Arduino - Bilder </summary>
 <img src="https://user-images.githubusercontent.com/88385654/162223731-b526657f-9fbc-44f2-90b0-40e76a443f68.png">                                       </details>
 
-
+<h3> <a id="planung"> 1.6 Projektplanung</a>
+	
+<img alt="Übersichtsskizze" src="https://user-images.githubusercontent.com/88385654/162335480-27590c81-ecdf-4a94-a0be-b45e95934eac.jpg">
+	
 <hr>
 
 <h3> <a id="arduino"> 2.1 Arduino </a></h3>
