@@ -153,6 +153,14 @@ Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmierspra
 </details>
 <h3> <a id="hardware"> 1.4 erforderliche Hardware </a></h3>
 
+Wie bei dem letzten Projekt wird ein <a href="https://www.amazon.de/Arduino-Uno-Rev-3-Mikrocontroller-Board/dp/B008GRTSV6">Arduino Uno R3</a> verwendet. Durch die einfache Bedienung und die diversen Anschluss- und Einsatzmöglichkeiten bietet dieser Microkontroller weiterhin die Grundlage für das Projekt.
+<br/>
+Als zusätzlicher Microkontroller wird zudem ein NodeMCU Amica Modul V2 benutzt, welches ein ESP8266 ESP-12F als Herzstück trägt. Dabei handelt es sich um einen eigenständigen, mit der Arduino IDE (Entwicklungsumgebung) programmierbaren und durch ein integriertes Modul WLAN-fähigen Microkontroller. Dieser ermöglicht eine Integration in das Netzwerk. Es wurde sich für ein ESP-Modul entschieden, da es mit einem Preis von etwa 8€ sehr preiswert, aber dennoch recht leistungsstark ist, und durch die Eigenständigkeit die Kapazitäten des Arduinos geschont werden. Außerdem handelt es sich um ein gängiges Produkt, weshalb viele Tipps und Fehlerbehebungen im Internet zu finden sind. Wir haben uns aufgrund der hohen Verfügbarkeit für das <a href="https://www.amazon.de/AZDelivery-NodeMCU-Amica-V2-Parent/dp/B07ZZHY25Y"> Modell von „AZDelivery“ entschieden</a>.
+<br/>
+Des Weitern findet erneut das im letzten Halbjahr beschriebene![image](https://user-images.githubusercontent.com/88385654/162328281-ff154a1f-4b8f-4933-a2d3-b0dd4df604b5.png)
+
+
+
 
 
 <h3> <a id="software"> 1.5 verwendete Programme</a></h3>
