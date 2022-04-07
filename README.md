@@ -930,6 +930,7 @@ echo "Insertion Success!<br>";
 
 <h3> <a id="relexion"> 3.1 Reflexion des Projekts </a></h3>
 
+Dieses Projekt hat von uns einiges abverlangt. Daher sind wir umso glücklicher stolzer, dass jetzt dieses doch sehr ansehnliche Endprodukt entstanden ist. Grundsätzlich lässt sich erneut sehr positiv festhalten, dass die Einstellung der Gruppenmitglieder
 
 
 
