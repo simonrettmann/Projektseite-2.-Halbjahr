@@ -231,7 +231,7 @@ Der „Master“ bestimmt, wann die Kommunikation mit welchem Teilnehmer stattfi
 In diesem Projekt arbeitet der Arduino Uno als „Slave“. Wird dieser über die Adresse angesprochen, wird die „empfangfunktion ()“ ausgeführt. 
 
 <details>
-	<summary>Empfangfunktion()</summary>
+	<summary>empfangfunktion()</summary>
 
 ```c
 
@@ -295,7 +295,8 @@ void antwortfunktion(){            //eintreffende Aufforderung zur Datenübertra
 	
 </details>
 
-
+Ein weiteres Gerät, welches an den I2C-Datenbus angeschlossen ist, ist das I2C-LCD. Durch eine eigene „Slave-Adresse“ kann das Display angesteuert und die Anzeige aktualisiert werden. Da der Arduino Uno ebenfalls als „Slave“ arbeitet, können beide Teilnehmer nicht kommunizieren. Deshalb wird das LCD bei dem fortgeführten Projekt nicht vom Arduino Uno, sondern von NodeMCU angesteuert. Unter anderem aus diesem Grund muss zunächst die gemesse Temperatur vom Arduino auf NodeMCU übertragen werden, um anschließend die Werte auf dem Display darzustellen. Die Ansteuerung des LC-Displays wird durch eine passende Bibliothek erleichtert, wobei die Codierung, Übertragung und Decodierung von der Bibliothek übernommen wird.
+	
 <h3> <a id="website"> 2.2 Website, Dantenbank, Server </a></h3>
 
 Zuerst wurde eine recht simple Website mit Hilfe von html und ein wenig css erstellt. Dafür wurde bei visual studio code eine index.html - Datei und ein stylesheet.css angelegt. Die Website ist absichtlich sehr simpel gehalten und soll vor allen Dingen funktional sein. Die beiden Bilder auf der rechten Seite sind eine kleine Spielerei und sollen an das Layout der Stundenprotokolle erinnern. Da die Website als Steuerzentrale funktionieren soll, befindet sich dort ein html-input Feld. Über das Feld können verschiedene Dinge wie Typ, Maximalwert, Minimalwert und Ausgangswert eingestellt werden. Um ein einheitliches und ansprechendes Design zu erreichen wurden mit Hilfe von dem stylesheet Ramen und andere Verschönerung programmiert. Diese Schritte funktionierten nach einer Einarbeitungsphase relativ problemlos und schnell. 
