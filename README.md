@@ -424,6 +424,7 @@ Leider funktioniert die Datenübertragung von ESP auf die Datenbank nicht, weil 
 
 <details>
 	<summary>tabelle.php</summary>	
+```
 <?php
 
 $sql = "SELECT * FROM gaskocher WHERE   ID = (SELECT max(ID) From gaskocher)";
@@ -437,6 +438,7 @@ foreach($pdo->query($sql)as $row){
 }
 ?>
 	
+``` 
 </details>
 
 <details>
