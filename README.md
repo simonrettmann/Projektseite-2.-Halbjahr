@@ -36,7 +36,8 @@
 <ul>
 &#10148; <a href="#arduino"> 2.1 Arduino</a> <br/>
 &#10148; <a href="#website"> 2.2 Website, Datenbank, Sever</a> <br/>
-&#10148; <a href="#endprodukt"> 2.3 Das Endprodukt</a>
+&#10148; <a href="#beispiel"> 2.3 Beispiel</a>
+&#10148; <a href="#endprodukt"> 2.4 Das Endprodukt</a>
 </ul>
   
 <b>Reflexion</b>
@@ -357,6 +358,7 @@ header("location:index.php")
 </details>
 
 Damit die Werte auch von dem Arduino als Temperatureingabe genutzt werden können, greift der ESP auf die Datenbank zu und kann Daten von dort abgreifen. Dazu ist der ESP mit dem Internet verbunden und führt mehrere auf dem Server gespeicherten php Skripte aus. Das Dokument database.php sorgt für den Verbindungsaufbau zwischen ESP und Datenbank. Sobald der ESP mit der Datenbank verbunden ist, wird der Code 200 (erfolgreiches verbinden) im seriellen Monitor ausgegeben. Nachdem die Verbindung hergestellt ist wird der Wert mit der höchsten id (WHERE ID(max) ausgegeben und ebenfalls im seriellen Monitor angezeigt. Nachdem der ESP die Daten empfangen hat, können diese an den Arduino transportiert werden und die Temperatur wird reguliert. 
+Auch wenn die Theorie hinter diesem Schritt ziemlich simpel ist, gestaltete sich die Umsetzung sehr schwierig. Dies liegt daran, dass zwei Programmiersprachen und Artn miteinander verbunden werden mussten. Da dieser Schritt lange nicht gelang, wurde ein Video mit einem ähnlichen Zweck als Beispiel durchgearbeitet und nachgebaut. Es stellte sich jedoch heraus, dass die Umsetzung nicht so einfach war wie gedacht und dass selbst die aus dem Internet kopierten Beispiele nicht funktionierten. Daher vergingen mehrere Wochen des Debuggings, in denen die einzelnen Codes verändert wurden. Kurz vor den Ferien gelang der Gruppe jedoch ein Durchbruch und die LED ließ sich über eine dafür vorgesehene Website steuern. Weitere Informationen zu dem Beispiel gibt es in dem <a href="https://www.youtube.com/watch?v=J9ziYzmiW9I"> Originalvideo</a>, unserem <a href="https://www.youtube.com/watch?v=xTHpKBRuh9c"> Versuchvideo </a> und dem <a href="#beispiel">Unterpunkt 1.6 Beispiel</a>.
 
 <details>
  <summary>database.php</summary>
@@ -417,7 +419,9 @@ Damit die Werte auch von dem Arduino als Temperatureingabe genutzt werden könne
  ```
 </details>
 
-<h3> <a id="endprodukt"> 2.3 Das Endprodukt </a></h3>
+<h3> <a id="beispiel"> 2.3 Beispiel</a></h3>
+
+<h3> <a id="endprodukt"> 2.4 Das Endprodukt </a></h3>
 
 <hr>
 
