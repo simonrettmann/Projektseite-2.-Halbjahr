@@ -36,7 +36,7 @@
 <ul>
 &#10148; <a href="#arduino"> 2.1 Arduino</a> <br/>
 &#10148; <a href="#website"> 2.2 Website, Datenbank, Sever</a> <br/>
-&#10148; <a href="#beispiel"> 2.3 Beispiel</a><br/>
+&#10148; <a href="#beispiel"> 2.3 Steuerung einer LED</a><br/>
 &#10148; <a href="#endprodukt"> 2.4 Das Endprodukt</a>
 </ul>
   
@@ -420,7 +420,7 @@ Auch wenn die Theorie hinter diesem Schritt ziemlich simpel ist, gestaltete sich
 </details>
 
 Grundsätzlich wäre es sinnvoll, wenn der Arduino über den Eintrag in die Datenbank Werte wie momentane Öffnung des Ventils in Prozent und die gemessene Temperatur ausgeben würde. So wäre die Website interaktiv und ein großer Schritt hin zur Praktikabilität wäre gemacht. Um einen Wert aus der Datenbank auf der Website anzeigen zu lassen, wurde das Dokument tabelle.php erstellt. Dabei wird mit Hilfe der select Funktion ein Wert aus einer Tabelle ausgewählt und auf der Website dargestellt. Auch hier wird der Wert mit der höchsten id ausgewählt, sodass immer nur der neuste Wert angezeigt wird und es nicht zu Verwirrungen kommt. All das funktioniert, sodass unter der Eingabe immer der Wert mit der höchsten id angezeigt wird.
-Leider funktioniert die Datenübertragung von ESP auf die Datenbank nicht, weil der Upload von Daten durch den ESP kurzzeitig zu einem so hohen Strombedarf kommt, dass der ESP sich selber ausschaltet und abstürzt. Daher können keine gemessenen Werte vom Arduino in die Datenbank eingetragen werden, sodass als prove of concept der Wert der höchsten id der eingestellten Temperatur ausgegeben wird. So hat man eine Kontrolle, ob der eingestellte Wert in die Datenbank übernommen wurde. Es ist schade, dass der Upload nicht funktioniert, da ein Verbraucher so keine Rückmeldung hat, ob der Gaskocher eingeschaltet ist und wie heiß das Wasser ist. Ein aktiver Wertemonitor wäre ohne diese hardwaretechnischen, bauartbedingten Fehler beim ESP gut möglich und die softwaretechnischen Vorraussetzungn sind durch tabelle.php und connect.php gegeben. 
+Leider funktioniert die Datenübertragung von ESP auf die Datenbank nicht, weil der Upload von Daten durch den ESP kurzzeitig zu einem so hohen Strombedarf kommt, dass der ESP sich selber ausschaltet und abstürzt. Daher können keine gemessenen Werte vom Arduino in die Datenbank eingetragen werden, sodass als prove of concept der Wert der höchsten id der eingestellten Temperatur ausgegeben wird. So hat man eine Kontrolle, ob der eingestellte Wert in die Datenbank übernommen wurde. Es ist schade, dass der Upload nicht funktioniert, da ein Verbraucher so keine Rückmeldung hat, ob der Gaskocher eingeschaltet ist und wie heiß das Wasser ist. Ein aktiver Wertemonitor wäre ohne diese hardwaretechnischen, bauartbedingten Fehler beim ESP gut möglich und die softwaretechnischen Vorraussetzungn sind durch tabelle.php und connect.php gegeben. Damit sich dieses Problem in der Praxis nicht ganz so stark bemerkbar macht, wurde wie im letzten Projekt ein LC-Display verwendet, auf dem man alle relavanten Informationen ablesen kann. 
 
 <details>
 	<summary>tabelle.php</summary>	
@@ -489,8 +489,136 @@ echo "Insertion Success!<br>";
 	
 </details>
 
-<h3> <a id="beispiel"> 2.3 Beispiel</a></h3>
+<h3> <a id="beispiel"> 2.3 Steuerung einer LED</a></h3>
 
+Da die Kommunikation zwischen dem ESP und der Datenbank lange nicht funktionierte und sehr problematisch war, entschied sich die Gruppe anhand eines YouTube Tutorials die Schritte nachzuvollziehen. Dafür wurde sich das <a href="https://www.youtube.com/watch?v=J9ziYzmiW9I"> Tutorial</a> von <a href="https://www.youtube.com/channel/UCk8rZ8lhAH4H-75tQ7Ljc1A" Uteh Str </a> genau angeschaut und nachgebaut. Interessanterweise funktionierten die übernommenen Codes jedoch nicht auf anhieb. Ein Problem war, dass auf dem Server das Leitdokument index.php und nicht main.php heißen muss. Außerdem sollte der ESP über ein php-Dokument mit if-Schleife die Daten aus der Datenbank nehmen. Da die Schleife allerdings fehlerhaft war, wurde sie nicht außgeführt. Der Fehler, der am längsten zum Beheben gebraucht hat war ein Versionsunterschied in der Adresse der Website. Statt https ist die verwendete Website nämlich in http geschrieben, sodass ein simpler Schreibfehler lange Zeit den Erfolg des Codes verhindert hat. 
+Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code und die Steuerung einer LED über eine Website war möglich. Dies sieht man auch in folgenden <a href="https://www.youtube.com/watch?v=ujq6IXgyYq8&t=16s"> Video</a>. Auch wenn der Erfolg des Versuchs lange auf sich warten ließ, war das Projekt dennoch erfolgreich, da das Script in ähnlicher Form für den Gaskocher verwendet werden konnte und die Gruppe viel aus dem Experiment gelernt hat. 
+
+<details>
+	<summary>index.php</summary>
+	
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+      html {
+          font-family: Arial;
+          display: inline-block;
+          margin: 0px auto;
+          text-align: center;
+      }
+      
+      h1 { font-size: 2.0rem; color:#2980b9;}
+      h2 { font-size: 1.25rem; color:#2980b9;}
+      
+      .buttonON {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px #999;
+      }
+      .buttonON:hover {background-color: #3e8e41}
+      .buttonON:active {
+        background-color: #3e8e41;
+        box-shadow: 0 1px #666;
+        transform: translateY(4px);
+      }
+        
+      .buttonOFF {
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #e74c3c;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px #999;
+      }
+      .buttonOFF:hover {background-color: #c0392b}
+      .buttonOFF:active {
+        background-color: #c0392b;
+        box-shadow: 0 1px #666;
+        transform: translateY(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Controlling LED on NodeMCU ESP12E ESP8266 with MySQL Database</h1>
+    
+    <form action="updateDBLED.php" method="post" id="LED_ON" onsubmit="myFunction()">
+      <input type="hidden" name="Stat" value="1"/>    
+    </form>
+    
+    <form action="updateDBLED.php" method="post" id="LED_OFF">
+      <input type="hidden" name="Stat" value="0"/>
+    </form>
+    
+    <button class="buttonON" name= "subject" type="submit" form="LED_ON" value="SubmitLEDON" >LED ON</button>
+    <button class="buttonOFF" name= "subject" type="submit" form="LED_OFF" value="SubmitLEDOFF">LED OFF</button>  
+  </body>
+</html>
+```
+</details>
+
+<details>
+	<summary>updateDBLED.php</summary>
+```
+<?php     
+  require 'database.php';
+  
+  if (!empty($_POST)) {
+    $Stat = $_POST['Stat'];
+      
+    // insert data
+    $pdo = Database::connect();
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = "UPDATE statusled SET Stat = ? WHERE ID = 0";
+    $q = $pdo->prepare($sql);
+    $q->execute(array($Stat));
+    Database::disconnect();
+    header("Location: index.php");
+  }
+?>
+```
+</details>
+
+<details>
+	<summary>GetData.php</summary>
+```
+<?php
+
+  $dbName = 'sschuelersql4';
+  $dbHost = 'localhost';
+  $dbUsername = 'sschuelersql4';
+  $dbUserPassword = 'lycquzesjb';
+ $pdo = new PDO( "mysql:host=$dbHost;dbname=$dbName", $dbUsername, $dbUserPassword); //Verbindung mit der Datenbank
+
+  $sql = 'SELECT FROM statusled  WHERE   ID = (0); //Wert mit der ID=0 wird aus der Datenbank ausgelesen und als Status 0,1 weitergegeben
+  foreach ($pdo->query($sql) as $row) {
+    echo $row['eintemperatur'];
+  }
+?>
+```
+</details>
+	
+	
 <h3> <a id="endprodukt"> 2.4 Das Endprodukt </a></h3>
 
 <hr>
