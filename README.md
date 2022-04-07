@@ -626,7 +626,11 @@ Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code un
 	
 </details>
 	
-	
+<details>
+	<summary>Screenshot der Website</summary>
+<img src="https://user-images.githubusercontent.com/88385654/156559570-7df79162-2da5-44c5-bc18-5d1365f89a2d.png">
+</details>
+
 <h3> <a id="endprodukt"> 2.4 Das Endprodukt </a></h3>
 
 <hr>
