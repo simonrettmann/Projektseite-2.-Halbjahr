@@ -356,6 +356,67 @@ header("location:index.php")
  
 </details>
 
+Damit die Werte auch von dem Arduino als Temperatureingabe genutzt werden können, greift der ESP auf die Datenbank zu und kann Daten von dort abgreifen. Dazu ist der ESP mit dem Internet verbunden und führt mehrere auf dem Server gespeicherten php Skripte aus. Das Dokument database.php sorgt für den Verbindungsaufbau zwischen ESP und Datenbank. Sobald der ESP mit der Datenbank verbunden ist, wird der Code 200 (erfolgreiches verbinden) im seriellen Monitor ausgegeben. Nachdem die Verbindung hergestellt ist wird der Wert mit der höchsten id (WHERE ID(max) ausgegeben und ebenfalls im seriellen Monitor angezeigt. Nachdem der ESP die Daten empfangen hat, können diese an den Arduino transportiert werden und die Temperatur wird reguliert. 
+
+<details>
+ <summary>database.php</summary>
+ 
+```
+<?php
+	class Database {
+		private static $dbName = 'sschuelersql4' ;
+		private static $dbHost = 'localhost' ;
+		private static $dbUsername = 'sschuelersql4';
+		private static $dbUserPassword = 'lycquzesjb';
+		 
+		private static $cont  = null;
+		 
+		public function __construct() {
+			die('Init function is not allowed');
+		}
+		 
+		public static function connect() {
+		  // One connection through whole application
+		  if ( null == self::$cont ) {     
+        try {
+          self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword); 
+        }
+        catch(PDOException $e) {
+          die($e->getMessage()); 
+        }
+		  }
+		  return self::$cont;
+		}
+		 
+		public static function disconnect() {
+			self::$cont = null;
+		}
+	}
+?>
+ 
+```
+</details>
+
+<details>
+ <summary>GetData.php</summary>
+ 
+```
+ <?php
+
+  $dbName = 'sschuelersql4';
+  $dbHost = 'localhost';
+  $dbUsername = 'sschuelersql4';
+  $dbUserPassword = 'lycquzesjb';
+ $pdo = new PDO( "mysql:host=$dbHost;dbname=$dbName", $dbUsername, $dbUserPassword); //Verbindung mit der Datenbank
+
+  $sql = 'SELECT * FROM gaskocher  WHERE   ID = (SELECT max(ID) From gaskocher)'; //Wert mit der höchsten ID wird aus der Tabelle Gaskocher ausgelesen
+  foreach ($pdo->query($sql) as $row) {
+    echo $row['eintemperatur'];
+  }
+?>
+ ```
+</details>
+
 <h3> <a id="endprodukt"> 2.3 Das Endprodukt </a></h3>
 
 <hr>
