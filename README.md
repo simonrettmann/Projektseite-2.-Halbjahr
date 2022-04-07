@@ -424,6 +424,7 @@ Leider funktioniert die Datenübertragung von ESP auf die Datenbank nicht, weil 
 
 <details>
 	<summary>tabelle.php</summary>	
+
 ```
 <?php
 
@@ -438,11 +439,13 @@ foreach($pdo->query($sql)as $row){
 }
 ?>
 	
-``` 
+```
+
 </details>
 
 <details>
-	<summary>connect.php</summary>	
+	<summary>connect.php</summary>
+```
 <html>
 <body>
 
@@ -474,7 +477,8 @@ echo "Insertion Success!<br>";
 ?>
 </body>
 </html>
-	
+
+```
 </details>
 
 <h3> <a id="beispiel"> 2.3 Beispiel</a></h3>
