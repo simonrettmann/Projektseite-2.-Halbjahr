@@ -296,6 +296,31 @@ void antwortfunktion(){            //eintreffende Aufforderung zur Datenübertra
 </details>
 
 Ein weiteres Gerät, welches an den I2C-Datenbus angeschlossen ist, ist das I2C-LCD. Durch eine eigene „Slave-Adresse“ kann das Display angesteuert und die Anzeige aktualisiert werden. Da der Arduino Uno ebenfalls als „Slave“ arbeitet, können beide Teilnehmer nicht kommunizieren. Deshalb wird das LCD bei dem fortgeführten Projekt nicht vom Arduino Uno, sondern von NodeMCU angesteuert. Unter anderem aus diesem Grund muss zunächst die gemesse Temperatur vom Arduino auf NodeMCU übertragen werden, um anschließend die Werte auf dem Display darzustellen. Die Ansteuerung des LC-Displays wird durch eine passende Bibliothek erleichtert, wobei die Codierung, Übertragung und Decodierung von der Bibliothek übernommen wird.
+<br/>
+Der NodeMCU Code ist weitestgehend neu. Zunächst muss die Arduino IDE auf dem Microcontroller und die Boardkonfigurationen über den Boardverwalter des Arduino-Programms installiert werden. Anschließend kann mit der Entwicklungsoberfläche von Arduino programmiert werden.
+NodeMCU hat die Aufgabe sowohl mit der Datenbank, als auch mit dem Arduino und dem LC-Display zu kommunizieren. Das Board führt alle Netzwerkfunktionen aus. Um Zugang zu dem Netzwerk zu haben, wird der integrierte WLAN-Chip verwendet. Dabei werden drei verschiedene „libraries“ verwendet, welche das Programmieren vereinfachen. Alle für das Projekt verwendete Libraries können „verwendete libraries für das Projekt“ gefunden werden.
+Die Verbindung zu allen gängigen WLAN-Typen erfolgt durch den Befehl „WiFi.begin(*ssid*, *passwort);“. Anschließend wird sichergestellt, dass die Verbindung zum Netzwerk erfolgreich war. Der entscheidende Schritt ist die Verbindung zu der Datenbank über einen http-request. NodeMCU sorgt durch die URL http://gaskocher.schormarnschueler.de/GetData.php dafür, dass das php-Dokument „GetData.php“ auf dem Server ausgeführt wird und die verarbeitete Information als „Payload“, also als Rückgabe, empfangen werden kann. So wird der gewünschte Wert, welcher in der Datenbank gespeichert ist, durch das php-Dokument ausgelesen und an das ESP8266 übergeben. Nachdem der Payload, also die eingestellte Temperatur als Variable im NodeMCU Code gespeichert wurde, wird die Verbindung zum Server geschlossen. Je öfter diese Verbindung stattfindet, desto schneller ist die Übertragung der Daten von der Website bis zum ESP. Ausgiebig experimentiert wurde mit dem umgekehrten Prozess: dem Upload von Daten des NodeMCUs in die Datenbank. Hier ergaben sich jedoch Stabilitätsprobleme, weshalb angesichts der kurzen Projektzeit von dieser Funktion abgesehen wurde. Grundsätzlich ist dies jedoch möglich. 
+Die Codeabschnitte für die I2C-Kommunikation des „Masters“ (ESP) funktionieren ähnlich zu denen des „Arduino-Slaves“. Der große Unterschied besteht in der Fähigkeit, eigenständig die Kommunikation zu starten. Wird „sendeWerte();“ ausgeführt, wird die eingestellte Temperatur, welche vorher aus der Datenbank gezogen wurde, zerlegt und versendet. Dazu muss auch die Slave-Adresse angegeben werden, sodass die Daten am richtigen Teilnehmer ankommen.
+
+<details>
+	<summary>sendeWert();</summary>
+
+```c
+	
+void sendeWerte(){                            //eingestellteTemp wird via I2C an den Arduino gesendet
+  byte buffer[2];
+ 
+  buffer[0] = lowByte(eingestellteTemp);      //Integer-Variable wird in 2 Bytes getrennt 
+  buffer[1] = highByte(eingestellteTemp);
+  
+  Wire.beginTransmission(10);                 //Verbindung zum Arduino (Slave-Adresse: 10)
+  Wire.write( buffer, 2);                     //Übertragung der Bytes
+  Wire.endTransmission();                     //Ende der Übertragung
+}	
+	
+```
+
+</details>
 	
 <h3> <a id="website"> 2.2 Website, Dantenbank, Server </a></h3>
 
