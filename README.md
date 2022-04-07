@@ -231,7 +231,7 @@ Der „Master“ bestimmt, wann die Kommunikation mit welchem Teilnehmer stattfi
 In diesem Projekt arbeitet der Arduino Uno als „Slave“. Wird dieser über die Adresse angesprochen, wird die „empfangfunktion ()“ ausgeführt. 
 
 <details>
-	<summary>Empfangfunktion</summary>
+	<summary>Empfangfunktion()</summary>
 
 ```c
 
@@ -246,6 +246,26 @@ void empfangfunktion(){            //entreffende Informationen werden verarbeite
 }
 
 	
+```
+
+</details>
+
+Die Bytes, welche über die Leitung gesendet werden, werden in einen Array, also in eine Reihe von Bytes, gespeichert. Anschließend wird die Information zu einer Integer-Variable zusammengesetzt. Dazu dient die Funktion „setzeZahlZusammen()“, welche Integer-Variablen erzeugt, indem die Informationen aus zwei Bytes kombiniert werden. Über diesen Eingang erzeugt der Arduino die Variable „eingestellteTemp“ welche anschließend weiterverarbeitet wird.
+	
+<details>
+	<summary>setzeZahlZusammen();</summary>
+	
+```c
+	
+int setzeZahlZusammen(unsigned int high, unsigned int low) {        //Funktion, um aus zwei Bytes eine Integer-Variable zu kombinieren 
+ 
+  int kombiniert;
+  kombiniert = high;
+  kombiniert = kombiniert * 256;
+  kombiniert |= low;
+  return kombiniert;
+}
+
 ```
 
 </details>
