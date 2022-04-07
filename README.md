@@ -631,6 +631,13 @@ Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code un
 <img src="https://user-images.githubusercontent.com/88385654/156559570-7df79162-2da5-44c5-bc18-5d1365f89a2d.png">
 </details>
 
+<details>
+	<summary>Video der Steuerung der LED - novum hotplate</summary>
+	<div align="center">
+  			<a href="https://www.youtube.com/watch?v=xTHpKBRuh9c"><img src="https://user-images.githubusercontent.com/88385654/161727389-0f1cf787-5f1d-463c-ac45-d298d5613ecc.png" alt="Fernsteuerung LED"></a>	
+	</div>
+</details>
+
 <h3> <a id="endprodukt"> 2.4 Das Endprodukt </a></h3>
 
 <hr>
