@@ -603,6 +603,7 @@ Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code un
 	<summary>GetData.php</summary>
 	
 ```
+	
 <?php
 
   $dbName = 'sschuelersql4';
