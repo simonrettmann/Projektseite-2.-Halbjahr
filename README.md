@@ -193,7 +193,7 @@ Zuerst wurde eine recht simple Website mit Hilfe von html und ein wenig css erst
 
 <details>
  <summary>index.html</summary>
- ```
+ 
 <!DOCTYPE html>
 
 <html>
@@ -232,7 +232,7 @@ Zuerst wurde eine recht simple Website mit Hilfe von html und ein wenig css erst
         ?>
     </body>
 </html>
-```
+
 
 </details>
  
