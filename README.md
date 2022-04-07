@@ -184,6 +184,11 @@ Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmierspra
  <summary>Arduino - Bilder </summary>
 <img src="https://user-images.githubusercontent.com/88385654/162223731-b526657f-9fbc-44f2-90b0-40e76a443f68.png">                                       </details>
 
+
+<hr>
+
+
+
 <h3> <a id="arduino"> 2.1 Arduino </a></h3>
 
 
