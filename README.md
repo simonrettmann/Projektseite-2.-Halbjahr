@@ -601,6 +601,7 @@ Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code un
 
 <details>
 	<summary>GetData.php</summary>
+	
 ```
 <?php
 
@@ -615,7 +616,9 @@ Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code un
     echo $row['eintemperatur'];
   }
 ?>
+	
 ```
+	
 </details>
 	
 	
