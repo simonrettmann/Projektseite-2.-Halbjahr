@@ -147,7 +147,8 @@ Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmierspra
 
 <img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162216442-6b213f8b-9ab6-4c8b-a1ef-9fb5bb28b9e5.png"> 
 <b>Visual Studio Code</b><br/>
-Visual Studio Code ist ein kostenloser Quelltexteditor und ist in der Informatikwelt weit verbreitet. Besonders hilfreich ist die automatische Färbung des Quellcodes während des Schreibens und die automatische sehr übersichtliche Unterteilung in verschiedene Code-Ebenen. <br/>
+Visual Studio Code ist ein kostenloser Quelltexteditor und ist in der Informatikwelt weit verbreitet. Besonders hilfreich ist die automatische Färbung des Quellcodes während des Schreibens und die automatische sehr übersichtliche Unterteilung in verschiedene Code-Ebenen.
+<br/>
 
 <details>
  <summary>Visual Studio Code - Bilder</summary>
@@ -157,7 +158,8 @@ Visual Studio Code ist ein kostenloser Quelltexteditor und ist in der Informatik
 
 <img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162218087-85a6771b-7c7f-43be-9c90-dd594e06b684.png">
 <b>CyberDuck</b><br/>
-CyberDuck ist ein kostenloser FTP-Client, der den Zugriff auf Sever ermöglicht. So wird ermöglicht, dass lokal gespeicherte und erstellte Dokumente auf den Server geladen werden können.<br/>
+CyberDuck ist ein kostenloser FTP-Client, der den Zugriff auf Sever ermöglicht. So wird ermöglicht, dass lokal gespeicherte und erstellte Dokumente auf den Server geladen werden können. 
+<br/>
 
 <details>
  <summary>CyberDuck - Bilder</summary>
