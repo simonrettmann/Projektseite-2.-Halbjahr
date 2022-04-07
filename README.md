@@ -483,6 +483,12 @@ echo "Insertion Success!<br>";
 	
 </details>
 
+<details>
+	<summary>Screenshot von der Website</summary>
+<img src="https://user-images.githubusercontent.com/88385654/162257440-10de68cd-84b2-40a1-b8e4-4e1f06b7171f.png">
+	
+</details>
+
 <h3> <a id="beispiel"> 2.3 Beispiel</a></h3>
 
 <h3> <a id="endprodukt"> 2.4 Das Endprodukt </a></h3>
