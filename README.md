@@ -921,11 +921,15 @@ echo "Insertion Success!<br>";
 
 <details>
 	<summary>Bildergalerie</summary>
+<img src="https://user-images.githubusercontent.com/88385654/162285762-33a34b93-8f7b-4fb2-a711-8fb98e651993.jpg">
+<img src="https://user-images.githubusercontent.com/88385654/162286244-802831b5-fc2f-45b2-b197-70e9fe4a1865.jpg">
 
 </details>
 
 <hr>
 
 <h3> <a id="relexion"> 3.1 Reflexion des Projekts </a></h3>
+
+
 
 
