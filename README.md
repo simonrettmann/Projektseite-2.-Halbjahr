@@ -351,10 +351,9 @@ header("location:index.php")
  
 </details>
 
-<hr>
-
 <h3> <a id="endprodukt"> 2.3 Das Endprodukt </a></h3>
 
+<hr>
 
 <h3> <a id="relexion"> 3.1 Reflexion des Projekts </a></h3>
 
