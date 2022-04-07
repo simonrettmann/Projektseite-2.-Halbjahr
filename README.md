@@ -24,30 +24,30 @@
 <b> 1. Allgemeines </b>
 <br/>
 <ul>
-&#10148; <a href="#Rückblick"> 1.1 Ausgangslage</a> <br/>
-&#10148; <a href="#Zielsetzung"> 1.2 Zielsetzung und Vision</a> <br/>
-&#10148; <a href="#Lernen"> 1.3 erforderliche Fähigkeiten und Vorbereitungen</a> <br/>
-&#10148; <a href="#Hardware"> 1.4 erforderliche Hardware</a> <br/>
-&#10148; <a href="#Software"> 1.5 verwendete Programme</a>
+&#10148; <a href="#rückblick"> 1.1 Ausgangslage</a> <br/>
+&#10148; <a href="#zielsetzung"> 1.2 Zielsetzung und Vision</a> <br/>
+&#10148; <a href="#lernen"> 1.3 erforderliche Fähigkeiten und Vorbereitungen</a> <br/>
+&#10148; <a href="#hardware"> 1.4 erforderliche Hardware</a> <br/>
+&#10148; <a href="#software"> 1.5 verwendete Programme</a>
 </ul>
   
 <b> 2. Das Projekt</b>
 <br/>
 <ul>
-&#10148; <a href="#Arduino"> 2.1 Arduino</a> <br/>
-&#10148; <a href="#Website"> 2.2 Website, Datenbank, Sever</a> <br/>
-&#10148; <a href="Endprodukt"> 2.3 Das Endprodukt</a>
+&#10148; <a href="#arduino"> 2.1 Arduino</a> <br/>
+&#10148; <a href="#website"> 2.2 Website, Datenbank, Sever</a> <br/>
+&#10148; <a href="#endprodukt"> 2.3 Das Endprodukt</a>
 </ul>
   
 <b>Reflexion</b>
 <br/>
 <ul>
-&#10148; <a href="#Reflexion"> 3.1 Reflexion des Projekts</a>
+&#10148; <a href="#reflexion"> 3.1 Reflexion des Projekts</a>
 </ul>
 </body>
 <hr>
 
-<h3> <a id="#Rückblick"> 1.1 Ausgangslage</a></h3>
+<h3> <a id="#rückblick"> 1.1 Ausgangslage</a></h3>
 
 <body>
 Während der letzten Projektphase im 1. Halbjahr arbeitete die Gruppe an einem arduinogesteuerten Gaskocher. Ziel war es einen Gaskocher so steuern zu können, dass eine vorher eingestellte Temperatur in einem Kochtopf erreicht und gehalten werden kann. Für die Eingabe von Werten in °C wurde ein rotary encoder verwendet, sodass man in mehreren Modi die Temperatur gradgenau einstellen kann. Außerdem ist ein Thermometer in dem Topfdeckel integriert, das dauerhauft die Temperatur des Topfinhaltes misst und an den Arduino weitergibt. Die ankommenden Werte werden von dem Arduino verrechnet und über eine logistische Funktion in eine prozentuale Öffnung des Gaskochers umgerechnet. Der Gasfluss zum Gaskocher wird über einen Schrittmotor geregelt. Eine automatische Zündung ist nicht integriert, sodass man diese händisch bei leichter Öffnung des Ventils vornehmen muss. Außerdem speichert der Schrittmotor seine absolute Position leider nicht und diese kann auch nicht angegeben werden, sodass vor der Motor vor jeder Benutzung kalibiert werden muss. 
@@ -68,14 +68,14 @@ Während der letzten Projektphase im 1. Halbjahr arbeitete die Gruppe an einem a
 </body>
 
 
-<h3> <a id="#Zielsetzung"> 1.2 Zielsetzung und Vision </a></h3>
+<h3> <a id="#zielsetzung"> 1.2 Zielsetzung und Vision </a></h3>
 
 Aufgrund der großen Begeisterung innerhalb der Gruppe für das Projekt, entschied sich die Gruppe auch im 2. Halbjahr am Gaskocher weiterzuarbeiten und diesen noch weiter zu verbessern. Neben der Idee des physical computings, die den Gruppenmitgliedern gut gefallen hat, wurde sich dazu entschieden im zweiten Halbjahr einen größeren Fokus auf die Software zu legen ohne dabei den Bezug zur Praxis zu verlieren, da die Software auf den Gaskocher angewendet werden sollte. Die Idee kam auf den Gaskocher von überall auf der Welt steuern zu können. Diese vielleicht etwas fernliegende Idee hat einen praktischen Hintergrund. Stellen Sie sich vor: Sie kommen von einem langen Tag nach Hause und Ihnen knurrt der Magen. Was gibt es da Schöneres als 20 Minuten vor Ankunft ganz entspannt von unterwegs seinen Herd anzustellen und den am Morgen darauf platzierten Topf mit Wasser zu erhitzen, sodass Sie nach Hause kommen und nur noch die Nudeln in das kochende Wasser geben müssen?
 Spinnt man dieses Gedankenexperiment weiter, wäre es natürlich für die tatsächliche Anwendung wichtig einen Not-Aus-Knopf zu haben, eine Webcam, die den Herd überwacht, einen selbstzündenden Gaskocher und eine interaktive Website mit live Wertemonitor. All diese Dinge sind potenzielle Weiterentwicklungsmöglichkeiten, sind aber nicht Ziel dieser Projektarbeit. 
 <br/>
 Ziel dieses Projekts ist es den im letzten Halbjahr erreichten Zwischenstand so weiterzuführen, dass die Temperatureingabe nicht nur über den rotary encoder, sondern auch über eine eigens dafür gebaute Website, erfolgen kann. Ein weiteres, aber weniger wichtiges Ziel ist die Erstellung eines Wertemonitors, sodass die Website interaktiv ist. Diese Dinge sollten spätestens bis zum 19.4.2022 erledigt sein. Sollte noch mehr Zeit sein, würde sich die Gruppe Zeit für die hardwaretechnische Umsetzung (Verlöten und sorgfältiges Verstauen) und das Einbauen einer elektronsichen Zündung machen. Letzteres bringt jedoch auch ein gewisses Brandrisiko und ist schwer umzusetzen, da es für den Arduino keinen Funkenwerfer oder ähnliche Teile gibt und so evt. mit Kurzschlüssen und Funkenflug gearbeitet werden müsste. 
 
-<h3> <a id="#Lernen"> 1.3 erforderliche Fähigkeiten und Vorbereitungen</a></h3>
+<h3> <a id="#lernen"> 1.3 erforderliche Fähigkeiten und Vorbereitungen</a></h3>
 
 Das Projekt war für die Gruppe großes Neuland. Genau dieser Umstand begeisterte die Gruppe und machte das Projekt interessant und arbeitsaufwendig. Neben der Programmierung des Arduinos, der bereits gesteuert werden konnte, musste sich auch mit einem ESP, einem wlanfähigen Controller, einer Website (HTML, CSS), einer mySql-Datenbank und einen Server auseinandergesetzt werden. Da es sich hierbei um ein relativ komplexes Projekt handelt, müssen alle Schritte funktionieren und zusammenarbeiten oder das Projekt ist nicht erfolgreich. Dies stellt eine neute Situation für die Gruppe dar, da Software wenig handlungsspielraum lässt und das für Hardware typische "Pfuschen" nicht funktioniert. 
 <br/>
@@ -89,7 +89,7 @@ Konkret mussten folgende Dinge erlernt werden.
  
  Neben diesen Fähigkeiten, die sich angeeignet werden mussten, mussten im Vorhinein auch ein paar organisatorische Dinge erledigt werden. 
  <ul>
-  <li>die erforderliche <a href="#Hardware">Hardware</a> musste angeschafft werden</li>
+  <li>die erforderliche <a href="#hardware"> Hardware</a> musste angeschafft werden</li>
   <li>da die Website von überall auf der Welt aufgerufen werden soll und nicht nur local gehostet werden soll, wird ein Server als Host für die Website benötigt</li>
  <li>damit die Werte gespeichert werden können wird auch ein Datenbankzugang benötigt</li>
 </ul>
@@ -139,11 +139,11 @@ Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmierspra
 <b> Kommunikation zwischen Datenbank und ESP</b>
 
 </details>
-<h3> <a id="#Hardware"> 1.4 erforderliche Hardware </a></h3>
+<h3> <a id="#hardware"> 1.4 erforderliche Hardware </a></h3>
 
 
 
-<h3> <a id="#Software"> 1.5 verwendete Programme</a></h3>
+<h3> <a id="#software"> 1.5 verwendete Programme</a></h3>
 
 <img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162216442-6b213f8b-9ab6-4c8b-a1ef-9fb5bb28b9e5.png"> 
 <b>Visual Studio Code</b><br/>
@@ -184,15 +184,15 @@ Auch dieses Halbjahr wurde der Arduino mit dem eigenen Codeeditor viel genutzt.
  <summary>Arduino - Bilder </summary>
 <img src="https://user-images.githubusercontent.com/88385654/162223731-b526657f-9fbc-44f2-90b0-40e76a443f68.png">                                       </details>
 
-<h3> <a id="#Arduino"> 2.1 Arduino </a></h3>
+<h3> <a id="#arduino"> 2.1 Arduino </a></h3>
 
 
-<h3> <a id="#Website"> 2.2 Website, Dantenbank, Server </a></h3>
+<h3> <a id="#website"> 2.2 Website, Dantenbank, Server </a></h3>
 
 
-<h3> <a id="#Endprodukt"> 2.3 Das Endprodukt </a></h3>
+<h3> <a id="#endprodukt"> 2.3 Das Endprodukt </a></h3>
 
 
-<h3> <a id="#Relexion"> 3.1 Reflexion des Projekts </a></h3>
+<h3> <a id="#relexion"> 3.1 Reflexion des Projekts </a></h3>
 
 
