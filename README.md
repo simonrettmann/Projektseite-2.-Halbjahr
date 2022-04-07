@@ -28,7 +28,7 @@
 &#10148; <a href="#zielsetzung"> 1.2 Zielsetzung und Vision</a> <br/>
 &#10148; <a href="#lernen"> 1.3 erforderliche Fähigkeiten und Vorbereitungen</a> <br/>
 &#10148; <a href="#hardware"> 1.4 erforderliche Hardware</a> <br/>
-&#10148; <a href="#software"> 1.5 verwendete Programme</a>
+&#10148; <a href="#software"> 1.5 verwendete Programme</a> <br/>
 &#10148; <a href="#planung"> 1.6 Projektplanung</a>
 </ul>
   
@@ -221,6 +221,8 @@ Nicht mehr verwendet wird der rotary encoder, da die Einstellung der Temperatur 
 <img src="https://user-images.githubusercontent.com/88385654/162223731-b526657f-9fbc-44f2-90b0-40e76a443f68.png">                                       </details>
 
 <h3> <a id="planung"> 1.6 Projektplanung</a>
+<br/>
+<br/>
 	
 <img alt="Übersichtsskizze" src="https://user-images.githubusercontent.com/88385654/162335480-27590c81-ecdf-4a94-a0be-b45e95934eac.jpg">
 	
