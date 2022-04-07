@@ -326,6 +326,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=sschuelersql4', 'sschuelersql4', 'ly
  
 <details>
  <summary>formular.php</summary>
+ 
 ```
  <?php
  $eintemperatur = $_POST["temperatureingabe"]; //Werte des Eingabefelds auf der Website werden als Variable definiert
@@ -339,7 +340,9 @@ $statement->execute(array($eintemperatur));
 header("location:index.php")
 
 ?>
+ 
 ```
+ 
 </details>
 
 <details>
