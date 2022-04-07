@@ -160,6 +160,14 @@ Als zusätzlicher Microkontroller wird zudem ein NodeMCU Amica Modul V2 benutzt,
 Des Weitern findet erneut das im letzten Halbjahr beschriebene <a href="https://www.amazon.de/ANGEEK-MAX6675-thermocouple-Temperature-arduino/dp/B07X41RG6K/ref=sr_1_2_sspa?__mk_de_DE=ÅMÅŽÕÑ&dchild=1&keywords=max6675&qid=1630502970&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE3WkxHNEVaR0RIODUmZW5jcnlwdGVkSWQ9QTAzODIyOTMxVUI3TVFJTVk4VzNZJmVuY3J5cHRlZEFkSWQ9QTA2ODY3NDQxUTUxRVNaSlU2QTdSJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==">Thermoelement MAX6675</a>, das <a href="https://www.az-delivery.de/products/lcd-display-16x2-mit-blauem-hintergrund-und-i2c-converter-bundle?variant=8192126353504&utm_source=google&utm_medium=cpc&utm_campaign=SSC&utm_term=&gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rAnj0JM_XPeS0Z1rtCZJ93HEfahyNPcxbsyNrfys7dtyzNWtuK33gMaAhgnEALw_wcB"> I2C-LC-Display</a>, <a href="https://www.digikey.de/de/products/detail/adafruit-industries-llc/918/5629415?utm_adgroup=Stepper%20Motors&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Motors%2C%20Solenoids%2C%20Driver%20Boards%2FModules_Returning&utm_term=&productid=5629415&gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rCAzhqzbNzZGrUsjejqYNCxjTkvTUfVFHDXiyRKR401iU-asx9D3XMaAojuEALw_wcB"> der einfache Schrittmotor inkl. Driverboard</a>, ein variables Netzteil zur Versorgung des Schrittmotors, der modifizierte Topf, der Gaskocher und ein Steckbrett mit Verbindungskabeln Verwendung. 
 Nicht mehr verwendet wird der rotary encoder, da die Einstellung der Temperatur über die Website erfolgt, weshalb auch der entsprechende Programmteil entfernt wurde. Deshalb wird ein internetfähiges Endgerät mit einem Browser benötigt, sodass die Website als Steuerzentrale aufgerufen werden kann.
 
+<details>
+	<summary>Bildergalerie</summary>
+<b>Arduino Uno</b> <img src="https://user-images.githubusercontent.com/88385654/162329333-18241b43-b320-4245-8aca-39932448ed29.jpg">
+<b>NodeMCU</b> <img src="https://user-images.githubusercontent.com/88385654/162329415-50b0d213-f8b5-42c4-8eb5-f158721e6df4.jpg">
+<b>Thermoelement MAX6675</b> <img src="https://user-images.githubusercontent.com/88385654/162329561-a4f05024-65e1-4b3d-93e7-5a1e04912812.jpg">
+<b>LC-Display</b> <img src="https://user-images.githubusercontent.com/88385654/162329629-399847d7-35d3-474c-8287-7dca34646fca.jpg">
+<b>Schrittmotor</b> <img src="https://user-images.githubusercontent.com/88385654/162329800-4a22aaa4-93aa-42f2-a44f-57672c1de31d.jpg">
+</details>
 
 <h3> <a id="software"> 1.5 verwendete Programme</a></h3>
 
