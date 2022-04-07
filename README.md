@@ -803,6 +803,7 @@ table, th, td, caption {
 
 <details>
 	<summary>formular.php</summary>
+	
 ```
 <?php
  $eintemperatur = $_POST["temperatureingabe"]; //Werte des Eingabefelds auf der Website werden als Variable definiert
@@ -816,7 +817,9 @@ $statement->execute(array($eintemperatur));
 header("location:index.php")
 
 ?>
+	
 ```
+	
 </details>
 
 <details>
