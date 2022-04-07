@@ -14,7 +14,7 @@
 <h4 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle-2.-Halbjahr"> Stundenprotokolle 2. Halbjahr</a> </h4> 
 <h4 align="left"> &#10132; <a href="https://github.com/simonrettmann/Stundenprotokolle"> Stundenprotokolle 1. Halbjahr</a> </h4> 
 <h4 align="left"> &#10132; <a href="https://www.youtube.com/channel/UCEljeGxqUxyXQlMq9Q-U8_w"> YouTube Kanal - Novum hotplate</a> </h4>
-  
+<h4 align="left"> &#10132; <a href="http://gaskocher.stormarnschueler.de/index.php"> Website als Steuerzentrale für den Gaskocher </a> </h4> 
 </body>
 <hr>
 <body>
@@ -90,11 +90,14 @@ Konkret mussten folgende Dinge erlernt werden.
  Neben diesen Fähigkeiten, die sich angeeignet werden mussten, mussten im Vorhinein auch ein paar organisatorische Dinge erledigt werden. 
  <ul>
   <li>die erforderliche <a href="#Hardware">Hardware</a> musste angeschafft werden</li>
-  <li>
-
+  <li>da die Website von überall auf der Welt aufgerufen werden soll und nicht nur local gehostet werden soll, wird ein Server als Host für die Website benötigt</li>
+ <li>damit die Werte gespeichert werden können wird auch ein Datenbankzugang benötigt</li>
 </ul>
-<h3> <a id="#Hardware"> 1.4 erforderliche Hardware </a></h3>
+<br/>
+Bezüglich des Serverplatzes und des Datenbankzugangs wurde der Tipp von Herrn Buhl gegeben sich mit Herrn Andy Adiwidjaja in Verbindung zu setzen, da dieser schon seit längerer Zeit Stormarnschüler bei ihren Informatikprojekten unterstützt. Nach kurzer E-Mailkorrespondenz stellte Herr Adiwidjaja netterweise sowohl Serverplatz mit einer Website (erreichbar unter www.gaskocher.stormarnschueler.de), als auch einen Datenbankzugang zur Verfügung. Vielen Dank auch an dieser Stelle für die Hilfsbereitschaft, da das Projekt ohne diese Hilfe nicht möglich gewesen wäre. 
+<br/>
 
+<h3> <a id="#Hardware"> 1.4 erforderliche Hardware </a></h3>
 
 <h3> <a id="#Software"> 1.5 verwendete Programme</a></h3>
 
