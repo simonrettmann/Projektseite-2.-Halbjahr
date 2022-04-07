@@ -147,7 +147,7 @@ Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmierspra
 
 <img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162216442-6b213f8b-9ab6-4c8b-a1ef-9fb5bb28b9e5.png"> 
 <b>Visual Studio Code</b><br/>
-Visual Studio Code ist ein kostenloser Quelltexteditor und ist in der Informatikwelt weit verbreitet. Besonders hilfreich ist die automatische Färbung des Quellcodes während des Schreibens und die automatische sehr übersichtliche Unterteilung in verschiedene Code-Ebenen.
+<a href="https://code.visualstudio.com/">Visual Studio Code</a> ist ein kostenloser Quelltexteditor und ist in der Informatikwelt weit verbreitet. Besonders hilfreich ist die automatische Färbung des Quellcodes während des Schreibens und die automatische sehr übersichtliche Unterteilung in verschiedene Code-Ebenen.
 <br/>
 
 <details>
@@ -158,7 +158,7 @@ Visual Studio Code ist ein kostenloser Quelltexteditor und ist in der Informatik
 
 <img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162218087-85a6771b-7c7f-43be-9c90-dd594e06b684.png">
 <b>CyberDuck</b><br/>
-CyberDuck ist ein kostenloser FTP-Client, der den Zugriff auf Sever ermöglicht. So wird ermöglicht, dass lokal gespeicherte und erstellte Dokumente auf den Server geladen werden können. 
+<a href="https://cyberduck.io/">CyberDuck</a> ist ein kostenloser FTP-Client, der den Zugriff auf Sever ermöglicht. So wird ermöglicht, dass lokal gespeicherte und erstellte Dokumente auf den Server geladen werden können. 
 <br/>
 
 <details>
@@ -170,7 +170,7 @@ CyberDuck ist ein kostenloser FTP-Client, der den Zugriff auf Sever ermöglicht.
 
 <img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162222149-c9971214-9a89-4cd0-8eec-5c60f0df86a6.png">
 <b>Fritzing</b><br/>
-Fritzing ist ein Programm zur Digitalisierung von Schaltplänen. Das Programm wurde sich bereits während der letzten Projektphase gekauft und auch dieses Halbjahr, wenn auch deutlich weniger, benutzt.
+<a href="https://fritzing.org/">Fritzing</a> ist ein Programm zur Digitalisierung von Schaltplänen. Das Programm wurde sich bereits während der letzten Projektphase gekauft und auch dieses Halbjahr, wenn auch deutlich weniger, benutzt.
 <details>
  <summary>Fritzing - Bilder</summary>
 <img src="https://user-images.githubusercontent.com/88385654/162222942-a2534ad8-fa7f-46db-8d3e-05522e736223.png">
@@ -179,7 +179,7 @@ Fritzing ist ein Programm zur Digitalisierung von Schaltplänen. Das Programm wu
 
 <img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162223091-b2dca110-6384-422f-9708-bbe419281338.png">
 <b>Arduino</b><br/>
-Auch dieses Halbjahr wurde der Arduino mit dem eigenen Codeeditor viel genutzt. 
+<a href="https://www.arduino.cc/">Arduino</a> ist eine aus Soft- und Hardware bestehende Plattform. Der eigene Codeeditor wurde auch dieses Projekt wieder viel benutzt und der Arduino stellt das Herzstück des Projekts dar. 
 <details>
  <summary>Arduino - Bilder </summary>
 <img src="https://user-images.githubusercontent.com/88385654/162223731-b526657f-9fbc-44f2-90b0-40e76a443f68.png">                                       </details>
