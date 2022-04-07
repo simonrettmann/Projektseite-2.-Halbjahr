@@ -423,9 +423,7 @@ Grundsätzlich wäre es sinnvoll, wenn der Arduino über den Eintrag in die Date
 Leider funktioniert die Datenübertragung von ESP auf die Datenbank nicht, weil der Upload von Daten durch den ESP kurzzeitig zu einem so hohen Strombedarf kommt, dass der ESP sich selber ausschaltet und abstürzt. Daher können keine gemessenen Werte vom Arduino in die Datenbank eingetragen werden, sodass als prove of concept der Wert der höchsten id der eingestellten Temperatur ausgegeben wird. So hat man eine Kontrolle, ob der eingestellte Wert in die Datenbank übernommen wurde. Es ist schade, dass der Upload nicht funktioniert, da ein Verbraucher so keine Rückmeldung hat, ob der Gaskocher eingeschaltet ist und wie heiß das Wasser ist. Ein aktiver Wertemonitor wäre ohne diese hardwaretechnischen, bauartbedingten Fehler beim ESP gut möglich und die softwaretechnischen Vorraussetzungn sind durch tabelle.php und connect.php gegeben. 
 
 <details>
-	<summary>tabelle.php</summary>
-```
-	
+	<summary>tabelle.php</summary>	
 <?php
 
 $sql = "SELECT * FROM gaskocher WHERE   ID = (SELECT max(ID) From gaskocher)";
@@ -438,8 +436,6 @@ foreach($pdo->query($sql)as $row){
  echo $temperatur; 
 }
 ?>
-	
-```
 	
 </details>
 
