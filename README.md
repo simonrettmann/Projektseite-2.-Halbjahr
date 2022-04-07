@@ -358,7 +358,7 @@ header("location:index.php")
 </details>
 
 Damit die Werte auch von dem Arduino als Temperatureingabe genutzt werden können, greift der ESP auf die Datenbank zu und kann Daten von dort abgreifen. Dazu ist der ESP mit dem Internet verbunden und führt mehrere auf dem Server gespeicherten php Skripte aus. Das Dokument database.php sorgt für den Verbindungsaufbau zwischen ESP und Datenbank. Sobald der ESP mit der Datenbank verbunden ist, wird der Code 200 (erfolgreiches verbinden) im seriellen Monitor ausgegeben. Nachdem die Verbindung hergestellt ist wird der Wert mit der höchsten id (WHERE ID(max) ausgegeben und ebenfalls im seriellen Monitor angezeigt. Nachdem der ESP die Daten empfangen hat, können diese an den Arduino transportiert werden und die Temperatur wird reguliert. 
-Auch wenn die Theorie hinter diesem Schritt ziemlich simpel ist, gestaltete sich die Umsetzung sehr schwierig. Dies liegt daran, dass zwei Programmiersprachen und Artn miteinander verbunden werden mussten. Da dieser Schritt lange nicht gelang, wurde ein Video mit einem ähnlichen Zweck als Beispiel durchgearbeitet und nachgebaut. Es stellte sich jedoch heraus, dass die Umsetzung nicht so einfach war wie gedacht und dass selbst die aus dem Internet kopierten Beispiele nicht funktionierten. Daher vergingen mehrere Wochen des Debuggings, in denen die einzelnen Codes verändert wurden. Kurz vor den Ferien gelang der Gruppe jedoch ein Durchbruch und die LED ließ sich über eine dafür vorgesehene Website steuern. Weitere Informationen zu dem Beispiel gibt es in dem <a href="https://www.youtube.com/watch?v=J9ziYzmiW9I"> Originalvideo</a>, unserem <a href="https://www.youtube.com/watch?v=xTHpKBRuh9c"> Versuchvideo </a> und dem <a href="#beispiel">Unterpunkt 1.6 Beispiel</a>.
+Auch wenn die Theorie hinter diesem Schritt ziemlich simpel ist, gestaltete sich die Umsetzung sehr schwierig. Dies liegt daran, dass zwei Programmiersprachen und Artn miteinander verbunden werden mussten. Da dieser Schritt lange nicht gelang, wurde ein Video mit einem ähnlichen Zweck als Beispiel durchgearbeitet und nachgebaut. Es stellte sich jedoch heraus, dass die Umsetzung nicht so einfach war wie gedacht und dass selbst die aus dem Internet kopierten Beispiele nicht funktionierten. Daher vergingen mehrere Wochen des Debuggings, in denen die einzelnen Codes verändert wurden. Kurz vor den Ferien gelang der Gruppe jedoch ein Durchbruch und die LED ließ sich über eine dafür vorgesehene Website steuern. Weitere Informationen zu dem Beispiel gibt es in dem <a href="https://www.youtube.com/watch?v=J9ziYzmiW9I"> Originalvideo</a>, unserem <a href="https://www.youtube.com/watch?v=xTHpKBRuh9c"> Versuchsvideo </a> und dem <a href="#beispiel">Unterpunkt 2.3 Beispiel</a>.
 
 <details>
  <summary>database.php</summary>
@@ -418,6 +418,19 @@ Auch wenn die Theorie hinter diesem Schritt ziemlich simpel ist, gestaltete sich
 ?>
  ```
 </details>
+
+Grundsätzlich wäre es sinnvoll, wenn der Arduino über den Eintrag in die Datenbank Werte wie momentane Öffnung des Ventils in Prozent und die gemessene Temperatur ausgeben würde. So wäre die Website interaktiv und ein großer Schritt hin zur Praktikabilität wäre gemacht. Um einen Wert aus der Datenbank auf der Website anzeigen zu lassen, wurde das Dokument tabelle.php erstellt. Dabei wird mit Hilfe der select Funktion ein Wert aus einer Tabelle ausgewählt und auf der Website dargestellt. Auch hier wird der Wert mit der höchsten id ausgewählt, sodass immer nur der neuste Wert angezeigt wird und es nicht zu Verwirrungen kommt. All das funktioniert, sodass unter der Eingabe immer der Wert mit der höchsten id angezeigt wird.
+Leider funktioniert die Datenübertragung von ESP auf die Datenbank nicht, weil der Upload von Daten durch den ESP kurzzeitig zu einem so hohen Strombedarf kommt, dass der ESP sich selber ausschaltet und abstürzt. Daher können keine gemessenen Werte vom Arduino in die Datenbank eingetragen werden, sodass als prove of concept der Wert der höchsten id der eingestellten Temperatur ausgegeben wird. So hat man eine Kontrolle, ob der eingestellte Wert in die Datenbank übernommen wurde. Es ist schade, dass der Upload nicht funktioniert, da ein Verbraucher so keine Rückmeldung hat, ob der Gaskocher eingeschaltet ist und wie heiß das Wasser ist. Ein aktiver Wertemonitor wäre ohne diese hardwaretechnischen, bauartbedingten Fehler beim ESP gut möglich und die softwaretechnischen Vorraussetzungn sind durch tabelle.php und connect.php gegeben. 
+
+<details>
+	<summary>tabelle.php</summary>
+	
+	
+	
+	
+	
+
+
 
 <h3> <a id="beispiel"> 2.3 Beispiel</a></h3>
 
