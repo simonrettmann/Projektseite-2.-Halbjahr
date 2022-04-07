@@ -232,13 +232,14 @@ Zuerst wurde eine recht simple Website mit Hilfe von html und ein wenig css erst
         ?>
     </body>
 </html>
- ```
- </details>
+```
+
+</details>
  
  <details>
  <summary>stylesheet.css</summary>
- ´´´
- 
+
+```
 .überschrift {
     font-size: 48pt;
     color:black;
@@ -300,7 +301,8 @@ table, th, td, caption {
   margin-top: 50px;
 }
 ```
- </details>
+ 
+</details>
  
 <details>
  <summary>Screenshot der Website</summary>
