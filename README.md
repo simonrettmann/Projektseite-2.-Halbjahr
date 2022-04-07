@@ -920,6 +920,304 @@ echo "Insertion Success!<br>";
 </details>
 
 <details>
+	<summary>ESP-Code</summary>
+	
+```c
+
+//Dieser Code ist für das ESP8266 Modul, welches als Master die I2C-Kommunikation steuert und die Daten aus der Datenbank abfragt:
+
+//Einbindung der benötigten Libaries: Zusammenfassung aller verwendeter Libaries, welche nicht direkt über den Bibliothek-Verwalter vorinstalliert sind, kannn auf der Projektseite gefunden werden.
+#include <ESP8266WiFi.h>            
+#include <WiFiClient.h>
+#include <ESP8266HTTPClient.h>
+#include <LiquidCrystal_I2C.h>   
+#include <Wire.h>
+
+LiquidCrystal_I2C lcd(0x3F, 16, 2); //LCD mit der SLave-Adresse wird initialisiert
+ 
+
+int eingestellteTemp;
+int gemesseneTempInt;
+float tatTemp;
+int pVentilInt;
+float pVentil;
+
+
+
+const char* ssid = "**********";        //Name des WLAN-Netzes
+const char* password = "**********";    //Passwort des WLAN-Netzes
+
+
+void setup() {
+ 
+  Serial.begin(9600);    //der serielle Monitor wird initialisiert
+  Wire.begin();          //der I2C-Datenbus wird initalisiert
+  
+  delay(500);
+  
+  lcd.begin();           //das LC-Display wird gestartet  
+  lcd.backlight();       //die Hintergrundbeleuchtung des LCDs wird aktiviert 
+  
+
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);                 //Verbindung zum WLAN wird aufgebaut 
+  Serial.println("");
+    
+  Serial.print("Connecting");                 //es wird gewartet,solange noch keine Verbindung besteht
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.println("");
+  Serial.print("Successfully connected to : ");
+  Serial.println(ssid);
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+  Serial.println();
+
+ 
+}
+
+void loop() {
+  
+  HTTPClient http;                        //ein http-Client wird delariert
+
+  String LinkGet, getData;
+  int id = 0; 
+  
+  LinkGet = "http://gaskocher.stormarnschueler.de/GetData.php";   //diese URL wird ausgeführt
+  getData = "ID=" + String(id);
+  
+  Serial.println("----------------Connect to Server-----------------");
+  Serial.println("Get LED Status from Database");
+  Serial.print("Request Link : ");
+  Serial.println(LinkGet);
+  http.begin(LinkGet);                                                    //Verbindung zu dem Server mit der URL wird aufgebaut
+  http.addHeader("Content-Type", "application/x-www-form-urlencoded");    //Definiert die Art des Inhaltes
+  int httpCodeGet = http.POST(getData);                                   //Anfrage wird gesendet
+  
+  String payloadGet = http.getString();                                   //Abfrage des Payloads vom Server
+  Serial.print("Response Code : "); 
+  Serial.println(httpCodeGet);                                            //Antwort-Code vom Server wird ausgegeben. Bei Erfolg lautet der http-Responsecode "200"
+  Serial.print("Returned data from Server : ");
+  Serial.println(payloadGet);                                             
+
+  eingestellteTemp = payloadGet.toInt();                                  //Inhalt des Payloads wird als Varaible gespeichert
+   Serial.println(eingestellteTemp);
+  
+  Serial.println("----------------Closing Connection----------------");
+  http.end();                                                             //Verbindung wird geschlossen
+  Serial.println();
+  Serial.println("Please wait x seconds for the next connection.");
+  Serial.println();
+  delay(1000);                                                            //Die Abfrage der Datenbank findet jede Sekunde statt
+                                                                          
+sendeWerte();     
+rufeWertAb();
+
+lcd.clear();                         //leert das LCD, damit neue und alte Werte sich nicht überlagern
+  lcd.setCursor(0, 0);                 
+  lcd.print("ein.Temp: ");
+    lcd.print(eingestellteTemp);
+    lcd.setCursor(15, 0);
+    lcd.print("C");
+  lcd.setCursor(0, 1);
+  lcd.print("akt.Temp: ");
+    lcd.print(tatTemp);
+    lcd.setCursor(15, 1);
+    lcd.print("C");
+   
+}
+
+void sendeWerte(){                            //eingestellteTemp wird via I2C an den Arduino gesendet
+  byte buffer[2];
+ 
+  buffer[0] = lowByte(eingestellteTemp);      //Integer-Variable wird in 2 Bytes getrennt 
+  buffer[1] = highByte(eingestellteTemp);
+  
+  Wire.beginTransmission(10);                 //Verbindung zum Arduino (Slave-Adresse: 10)
+  Wire.write( buffer, 2);                     //Übertragung der Bytes
+  Wire.endTransmission();                     //Ende der Übertragung
+}
+  
+void rufeWertAb() {                           //Werte werden vom Arduino abgefragt
+ 
+  byte buf[5];
+ 
+  int n = Wire.requestFrom(10, 6);            //es werden 6 Bytes vom Arduino (Slave-Adresse 10) abgefragt
+  for ( int i = 0; i < n; i++)
+  {
+    buf[i] = Wire.read();                     //empfangene Bytes werden als Array zwischengespeichert
+  }
+  gemesseneTempInt = setzeZahlZusammen(buf[1] , buf[0]);    //Jeweil ein Paar (immer 2) von den Bytes werden zu Integer-Variablen zusammengesetzt
+  eingestellteTemp = setzeZahlZusammen(buf[3] , buf[2]);
+  pVentilInt = setzeZahlZusammen(buf[5] , buf[4]);
+  tatTemp = (float)gemesseneTempInt /100 ;                  //Integers werden in Floats umgewandelt
+  pVentil = (float)pVentilInt /100 ;
+}
+ 
+int setzeZahlZusammen(unsigned int high, unsigned int low) {        //Funktion, um aus zwei Bytes eine Integer-Variable zu kombinieren 
+ 
+  int kombiniert;
+  kombiniert = high;
+  kombiniert = kombiniert * 256;
+  kombiniert |= low;
+  return kombiniert;
+}
+			 
+```
+			 
+</details>
+	
+<details>
+	<summary>Arduino-Code</summary>
+
+```c
+
+
+//Dieser Code ist für den Arduino Uno, welcher als Slave an der Kommunikation beteiligt ist und alle Prozesse der Temperaturregulierung steuert
+
+// in diesem Abschnitt werden die benötigten Bibliotheken eingebunden: Zusammenfassung aller verwendeter Libaries, welche nicht direkt über den Bibliothek-Verwalter vorinstalliert sind, kannn auf der Projektseite gefunden werden.
+//#include <LiquidCrystal_I2C.h>                       //ermöglicht eine einfache Komunikation mit dem LC-Display mit nur 2 Datenpins; Quelle: https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library                                                                                                                      
+#include <Wire.h>                                      //wird für die I2C-LCD Bibliothek zusätzliche für die Kommunikation benötigt benötigt; Quelle: Vorinstallierte Arduino-Bibliothek
+#include <AccelStepper.h>                              //ermöglicht einfache Programmierung des Schrittmotors; Quelle: Arduino-Biliotheken-Verzeichnis
+#include "max6675.h"                                   //ist für die Auslese des Thermosensors zuständig; Quelle: Arduino-Biliotheken-Verzeichnis von Adafruit
+
+//in diesem Abschnitt werden alle benötigten Variablen und Konstanten definiert:
+  //zunächst werden die Pin-Belegung:
+const int PinA = 2;   //CLK: Clock-Pin für den Rotary-Encoder
+const int PinB = 3;   //DT:  Daten-Output-Pin des Rotary-Encoder
+const int PinSW = 8;  //SW:  Knopf-Pin des Rotary-Encoder
+
+const int soPin = 4;  //SO: Serieller Output-Pin für das Thermoelement
+const int csPin = 5;  //CS: Chip-Select-Pin für das Thermoelement
+const int sckPin = 6; //SCK: Serieller Clock-Pin für das Thermoelement
+
+#define motorPin1 9   //Die 4 benötigten Pins für den Schrittmotor werden festgelegt 
+#define motorPin2 10
+#define motorPin3 11
+#define motorPin4 12
+
+  //außerdem werden verschiedene Variablen für die Programmierung benötigt:
+float tatTemp;                                //Variable für die gemessene Temperatur in Grad Celsius (float: mit 2 Nachkommastellen)
+int gemesseneTemperaturInt;
+int lastCount = 0;                            //speichert den letzten Wert des rotary encoders
+volatile int eingestellteTemp = 0;            //eingestellte Temperatur: wird durch die ISR (Interrupt Service Routine) aktualisiert
+float pVentil = 0;                            //Ventilstellung in Prozent (100% entspricht vollständiger Öffnung)
+int pVentilInt;
+int stepperPosition = 0;                      //Position des Schrittmotors in Schritten (4096 Schritte = 360°)
+float tempDifferenz;                          //Differenz zwischen eingestellter Temperatur und gemessener Temperatrur  
+const float schritteproprozent = 71.68;       //71.68 Schritte des Schrittmotors entpricht 1° Ventilöffnung 
+int rotarySchrittwert = 5;                    //Wertigkeit jedes am Rotaryencoder eingestellten Schrittes
+
+#define HALFSTEP 8                            //der Schrittmotor soll im Halfstep-Modus betrieben
+
+AccelStepper stepper1(HALFSTEP, motorPin1, motorPin3, motorPin2, motorPin4);    //das Objekt "stepper1" wird initialisiert
+
+MAX6675 thermo(sckPin, csPin, soPin);                                           //das Objekt "thermo" wird initialisiert
+
+
+//Der folgende Programmteil wird nur einmal abgerufen:
+void setup()       
+{
+  Serial.begin(9600);    //die serielle Kommunikation wird gestartet
+    delay(1000);         //Zeit, damit sich die Sensoren kalibrieren können 
+  
+  Wire.begin(10);                     //der I2C-Datenbus wird initalisiert
+  Wire.onRequest(antwortfunktion);    //wenn eine Datenabfrage ankommt, wird "antwortfunktion" ausgeführt 
+  Wire.onReceive(empfangfunktion);    //wenn Daten empfangen werden, wird "empfangfunktion" ausgeführt
+ 
+  stepper1.setCurrentPosition(0);     //die aktuelle Position des Schrittmotors wird = 0 gesetzt
+  stepper1.setMaxSpeed(1000.0);       //die maximale Geschwindigkeit des Steppers wird auf 1000 Schritte pro Sekunde gesetzt 
+  stepper1.setAcceleration(1000.0);   //die Beschleunigung des Steppers wird auf 1000 Schritte pro Sekunde^2 gesetzt 
+  stepper1.setSpeed(1000);            //die Geschwindigkeit des Steppers wird auf 1000 Schritte pro Sekunde festgelegt 
+
+  pinMode(PinA, INPUT);               //PinA und PinB sind INPUTs, um die Signale des Rotary-Encoders zu lesen
+  pinMode(PinB, INPUT);
+  pinMode(PinSW, INPUT_PULLUP);       //der SW-Pin ist potentailfrei; es wird ein Widerstand benötigt, dafür wird der im Arduino verbaute Pullup-Widerstand verwendet
+
+  Serial.println("Start");  //das Setup ist ausgeführt; im seriellen Monitor wir das mit "Start" signalisiert
+} 
+
+//Der folgende Programmteil wird bei Vollendung wiederholt
+void loop()
+{
+  float tatTemp = thermo.readCelsius();               //das Thermomenter wird ausgelesen und der Wert als Variable überführt
+  gemesseneTemperaturInt = tatTemp * 100;
+         delay(300);
+  
+delay(100);                           //0,1 Sekunden Pause, damit die Sensoren neue Werte bilden können
+
+  tempDifferenz = eingestellteTemp - tatTemp;               //Differenz aus eingestellter Temperatur und gemessener Temperatur wird gebildet und als int Variable gespeichert
+
+  stepperPosition = pVentil * schritteproprozent;           //die Position des Steppers ist das Produkt der gewünschten Ventilstellung und der Anzahl der Schritte, welche für 1% benötigt werden
+
+                                                             
+  pVentil= 80/(1+ pow(1.15, -tempDifferenz + 35)) +0.3;     //mathematische Funktion, welche die Temperaturdifferenz in eine Ventilstellung umsetzt
+  pVentil = min(100, max(0, pVentil));                      //der Wertebereich der Ventilöffnung wir zwischen 0% und 100% begrenzt
+  pVentilInt = pVentil * 100;
+
+  stepperPosition = min(7168, max(0, stepperPosition));     //um sicherzugehen, dass der Motor nicht zu weit dreht und die Hardware beschädigt, wird auch die maximale Drehung begrenzt
+
+//dieser Programmabschnitt aktuallisert die Position des Schrittmotors:
+stepper1.moveTo(stepperPosition);                     
+stepper1.runToPosition();          //leider wird der Code an diese Stelle pausiert; der Schrittmotor sollte also möglichst schnell drehen
+stepper1.disableOutputs();         //die Pins für den Schrittmotor werden deaktiviert. Somit wird Strom gespart und eine Überhitzung des Motors verhindert
+
+//der serielle Monitor dient unserem Projekt als Kontrollbildschirm, deshalb werden alle wichtigen Werte abgebildet: 
+  Serial.print("Eingestellte Temperatur: ");          
+  Serial.println(eingestellteTemp);
+         Serial.println(" ");
+         
+  Serial.print("Gemessene Temperatur in C: ");
+  Serial.println(tatTemp);
+         Serial.println(" ");
+         
+  Serial.print("Ventilöffnung in Prozent: ");
+  Serial.println(pVentil);
+         Serial.println(" ");
+
+  Serial.println("------------------------------------");  //dient der Übersicht im seriellen Monitor
+
+
+void empfangfunktion(){            //entreffende Informationen werden verarbeitet
+
+  byte buf[2];
+  for ( int i = 0; i < 2; i++)
+  {
+    buf[i] = Wire.read();          //eintreffende Bytes werden als Array zwischengespeichert
+  }
+  eingestellteTemp = setzeZahlZusammen(buf[1] , buf[0]);    //die beiden Bytes werden zu einer Integer-Variablen zusammengesetzt
+}
+
+void antwortfunktion(){            //eintreffende Aufforderung zur Datenübertragung wird verarbeitet
+  byte buffer[6];
+ 
+  buffer[0] = lowByte(gemesseneTemperaturInt);        //Variablen werden in Bytes zerlegt und in einem Array zwischengespeichert
+  buffer[1] = highByte(gemesseneTemperaturInt);         
+  buffer[2] = lowByte(eingestellteTemp);
+  buffer[3] = highByte(eingestellteTemp);
+  buffer[4] = lowByte(pVentilInt);
+  buffer[5] = highByte(pVentilInt);
+   
+  Wire.write( buffer, 6);                             //Daten des Arrays werden byteweise übertragen
+}
+
+int setzeZahlZusammen(unsigned int high, unsigned int low) {        //Funktion, um aus zwei Bytes eine Integer-Variable zu kombinieren 
+ 
+  int kombiniert;
+  kombiniert = high;
+  kombiniert = kombiniert * 256;
+  kombiniert |= low;
+  return kombiniert;
+}
+			 
+```
+			 
+</details>
+
+<details>
 	<summary>Bildergalerie</summary>
 <img src="https://user-images.githubusercontent.com/88385654/162285762-33a34b93-8f7b-4fb2-a711-8fb98e651993.jpg">
 <img src="https://user-images.githubusercontent.com/88385654/162286244-802831b5-fc2f-45b2-b197-70e9fe4a1865.jpg">
