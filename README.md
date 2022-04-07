@@ -309,9 +309,44 @@ table, th, td, caption {
  <img src="https://user-images.githubusercontent.com/88385654/162228599-0879e232-9569-42cc-8d70-3606e7b99b68.png">
 </details>
 
+Damit die Website nicht nur im lokalen Netwerk, sondern im Internet zu sehen sein sollte, wurde mit den Zugangsdaten von Herrn Adiwidjaja und Cyberduck eine Verbindung zum Server aufgebaut und die entsprechenden Dokumente konnten platziert werden, sodass die Website abrufbar war. 
+Allerdings funktionierte das input-Feld noch nicht, dafür musste erst das passende php Skript geschrieben werden und eine Datenbank erstellt werden. Dei Erstellung der Datenbank erfolgte nach erfolgreicher Anmeldung bei https://phpmyadmin.atw.io/, konnte eine Datenbank erstellt werden. Um die dort erstellte Tabelle mit Werten von der Website zu füllen, wurde das Dokument formular.php erstellt. Dieser Code bekommt die Daten aus dem Eingabefeld übermittelt und definiert sie als Variable. Anschließend wird das Dokument config.php über eine require Funktion eingebunden und so der Datenbankzugang hergestellt. Anschließend werden die Daten über die prepare und execute Funktion in die passende Tabelle und Spalte eingefügt.
 
+<details>
+ <summary>config.php</summary>
+ ```
+ <?php
+
+$pdo = new PDO('mysql:host=localhost;dbname=sschuelersql4', 'sschuelersql4', 'lycquzesjb');
+
+?>
+```
+</details>
+ 
+<details>
+ <summary>formular.php</summary>
+```
+ <?php
+ $eintemperatur = $_POST["temperatureingabe"]; //Werte des Eingabefelds auf der Website werden als Variable definiert
+echo $eintemperatur; //Werte werden zur Kontrolle ausgegeben
+
+require("config.php"); //Zugangsdaten der Datenbank
+
+$statement = $pdo ->prepare("INSERT INTO gaskocher(eintemperatur) values (?)"); //über die prepare und execute Funktion werden die Daten in die passende Tabelle (gaskocher) und Spalte (eintemperatur) eingefügt
+$statement->execute(array($eintemperatur));
+
+header("location:index.php")
+
+?>
+```
+</details>
+<details>
+ <summary>Screenshot der Datenbank</summary>
+<img src="https://user-images.githubusercontent.com/88385654/162234026-015ea17f-364c-419d-9ecd-68ea77ffab41.png">
+</details>
 
 <hr>
+
 <h3> <a id="endprodukt"> 2.3 Das Endprodukt </a></h3>
 
 
