@@ -146,7 +146,7 @@ Zur Erlernung der erforderlichen Programmierfertigkeiten und den Programmierspra
 <h3> <a id="#Software"> 1.5 verwendete Programme</a></h3>
 
 <img align="left" width="50" src="https://user-images.githubusercontent.com/88385654/162216442-6b213f8b-9ab6-4c8b-a1ef-9fb5bb28b9e5.png"> 
-<b>Visual Studio Code</b>
+<b>Visual Studio Code</b><br/>
 Visual Studio Code ist ein kostenloser Quelltexteditor und ist in der Informatikwelt weit verbreitet. Besonders hilfreich ist die automatische Färbung des Quellcodes während des Schreibens und die automatische sehr übersichtliche Unterteilung in verschiedene Code-Ebenen.
 
 <details>
