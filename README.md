@@ -36,7 +36,7 @@
 <ul>
 &#10148; <a href="#arduino"> 2.1 Arduino</a> <br/>
 &#10148; <a href="#website"> 2.2 Website, Datenbank, Sever</a> <br/>
-&#10148; <a href="#beispiel"> 2.3 Beispiel</a>
+&#10148; <a href="#beispiel"> 2.3 Beispiel</a><br/>
 &#10148; <a href="#endprodukt"> 2.4 Das Endprodukt</a>
 </ul>
   
