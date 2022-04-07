@@ -221,9 +221,34 @@ Nicht mehr verwendet wird der rotary encoder, da die Einstellung der Temperatur 
 
 <hr>
 
-
-
 <h3> <a id="arduino"> 2.1 Arduino </a></h3>
+
+Einige Teile vom Code des Projekts des ersten Halbjahrs konnten beibehalten werden. Da die Verarbeitung der eingestellten Temperatur zu einer Ventilstellung des Gaskochers, also der  Temperaturregulierung, zufriedenstellend gelang, wurde dieser Teil des Codes übernommen. Auch die Ansteuerung des Schrittmotors ist identisch. 
+Bei dem Code für den Arduino Uno hat sich im Wesentlichen nur die Art der Werteeingabe geändert. Im Vergleich zu dem Projekt des letzten Halbjahrs wird der Wert der eingestellten Temperatur extern erzeugt und dann an den Uno übermittelt. Die ISR-Funktion, welche für die Registrierung der Eingabewerte zuständig war, wurde entfernt. Die Aktualisierung des I2C-LCDs ist im neuen Code keine Aufgabe mehr des Unos. Diese Aufgabe erfüllt jetzt NodeMCU. Deshalb sind die entsprechenden Programmteile vom Code des Arduinos auf den NodeMCU übertragen worden.  
+Die größte Veränderung des Codes des Arduinos ist die Anbindung an den I2C-Datenbus. Das bedeutet, dass der Arduino als Teilnehmer an eine und plattform- und geräteübergreifende Kommunikationsmethode angeschlossen wird. Die I2C-Technologie ist zwar sehr universell einsetzbar und in ihren Grundzügen simpel, jedoch macht die hardwarenähe das Programmieren komplex. Die serielle Datenübertragung über zwei Leitungen erfolgt byteweise, weshalb alle Daten zunächst in Bytes zerlegt werden müssen, um diese zu übermitteln. Anschließend benötigt es einen entsprechenden Code, welcher die Bytes decodieren und interpretieren kann. 
+Der Datenbus kann von bis zu 128 Teilnehmern (wie Microkontrollern, Sensoren oder Displays, etc.) gleichzeitig verwendet werden. Alle Teilnehmer werden parallel an die SDA-Leitung zur Datenübertragung und an die SCL-Leitung zur Taktgebung geschaltet. Die Kommunikation ist klar geregelt. Es gibt zwei Typen von Teilnehmern: „Master“ und „Slave“.
+Der „Master“ bestimmt, wann die Kommunikation mit welchem Teilnehmer stattfindet. Die „Slaves“ können angesprochen werden und auch reagieren, jedoch nicht selbstständig die Kommunikation starten und nur Daten senden, wenn sie dazu aufgefordert werden. Jeder „Slave“ hat eine Adresse, mit welcher er angesteuert wird. Die Kommunikation findet immer zwischen dem „Master“ und den angeschlossenen „Slaves“ statt: Der „Master“ sendet Daten an „Slaves“ oder fordert diese dazu auf Daten zu senden. <br/>
+In diesem Projekt arbeitet der Arduino Uno als „Slave“. Wird dieser über die Adresse angesprochen, wird die „empfangfunktion ()“ ausgeführt. 
+
+<details>
+	<summary>Empfangfunktion</summary>
+
+```c
+
+void empfangfunktion(){            //entreffende Informationen werden verarbeitet
+
+  byte buf[2];
+  for ( int i = 0; i < 2; i++)
+  {
+    buf[i] = Wire.read();          //eintreffende Bytes werden als Array zwischengespeichert
+  }
+  eingestellteTemp = setzeZahlZusammen(buf[1] , buf[0]);    //die beiden Bytes werden zu einer Integer-Variablen zusammengesetzt
+}
+
+	
+```
+
+</details>
 
 
 <h3> <a id="website"> 2.2 Website, Dantenbank, Server </a></h3>
