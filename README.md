@@ -424,13 +424,59 @@ Leider funktioniert die Datenübertragung von ESP auf die Datenbank nicht, weil 
 
 <details>
 	<summary>tabelle.php</summary>
-	
-	
-	
-	
-	
+```
+<?php
+
+$sql = "SELECT * FROM gaskocher WHERE   ID = (SELECT max(ID) From gaskocher)";
+?>
 
 
+<?php
+foreach($pdo->query($sql)as $row){
+ $temperatur = $row['eintemperatur'];
+ echo $temperatur; 
+}
+?>
+```
+</details>
+
+<details>
+	<summary>connect.php</summary>
+```
+<html>
+<body>
+
+<?php
+
+$dbname = 'sschuelersql4';
+$dbuser = 'sschuelersql4';  
+$dbpass = 'lycquzesjb'; 
+$dbhost = 'localhost'; 
+
+$connect = @mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+
+if(!$connect){
+	echo "Error: " . mysqli_connect_error();
+	exit();
+}
+
+echo "Connection Success!<br><br>";
+
+$temperature = $_GET["temperature"];
+$humidity = $_GET["humidity"]; 
+
+
+$query = "INSERT INTO wertemonitor (temperature, humidity) VALUES ('$temperature', '$humidity')";
+$result = mysqli_query($connect,$query);
+
+echo "Insertion Success!<br>";
+
+?>
+</body>
+</html>
+```
+	
+</details>
 
 <h3> <a id="beispiel"> 2.3 Beispiel</a></h3>
 
