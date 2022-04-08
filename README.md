@@ -813,6 +813,11 @@ Die softwaretechnischen Voraussetzungen sind erfüllt, sodass der Arduino theore
 </details>
 
 <details>
+	<summary>Schaltplan von fritzing</summary>
+<img src="https://user-images.githubusercontent.com/88385654/162341662-77816585-0419-416e-af69-879fadf9af29.jpg">
+
+</details>
+<details>
 	<summary>Übersichtsskizze</summary>
 	
 <img src="https://user-images.githubusercontent.com/88385654/162335381-01b1191d-fb1b-463f-a06a-f6e42d10cb77.jpg">
