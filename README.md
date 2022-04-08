@@ -659,6 +659,12 @@ Da die Kommunikation zwischen dem ESP und der Datenbank lange nicht funktioniert
 Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code und die Steuerung einer LED über eine Website war möglich. Dies sieht man auch in folgendem <a href="https://www.youtube.com/watch?v=ujq6IXgyYq8&t=16s"> Video</a>. Auch wenn der Erfolg des Versuchs lange auf sich warten ließ, war das Projekt dennoch erfolgreich, da das Script in ähnlicher Form für den Gaskocher verwendet werden konnte und die Gruppe viel aus dem Experiment gelernt hat. 
 
 <details>
+	<summary>Schaltplan von fritzing</summary>
+<img src="https://user-images.githubusercontent.com/88385654/162341868-a293cc7e-b0ce-4c63-ad72-427d13832758.png">
+
+</details>
+	
+<details>
 	<summary>index.php</summary>
 	
 ```
