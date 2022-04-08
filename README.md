@@ -663,6 +663,104 @@ Nachdem all diese Unwegbarkeiten jedoch behoben waren, funktionierte der Code un
 <img src="https://user-images.githubusercontent.com/88385654/162341868-a293cc7e-b0ce-4c63-ad72-427d13832758.png">
 
 </details>
+
+<details>
+	<summary>Arduino Code </summary>
+	
+```c 
+
+//Quelle: https://www.youtube.com/watch?v=8jMr94B8iN0 to add NodeMCU ESP8266 library and board
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <ESP8266HTTPClient.h>
+
+
+#define ON_Board_LED 2 
+#define LED_D8 15 
+
+
+const char* ssid = "******"; 
+const char* password = "********"; 
+
+
+void setup() {
+
+  Serial.begin(115200);
+  delay(500);
+
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password); 
+  Serial.println("");
+    
+  pinMode(ON_Board_LED,OUTPUT); 
+  digitalWrite(ON_Board_LED, HIGH); 
+
+  pinMode(LED_D8,OUTPUT); 
+  digitalWrite(LED_D8, LOW); 
+
+
+  Serial.print("Connecting");
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
+
+    digitalWrite(ON_Board_LED, LOW);
+    delay(250);
+    digitalWrite(ON_Board_LED, HIGH);
+
+  }
+  digitalWrite(ON_Board_LED, HIGH);
+  Serial.println("");
+  Serial.print("Successfully connected to : ");
+  Serial.println(ssid);
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+  Serial.println();
+
+}
+
+void loop() {
+
+  HTTPClient http; 
+  WiFiClient client;
+
+  String GetAddress, LinkGet, getData;
+  int id = 0; //--> ID in Database
+  GetAddress = "http://gaskocher.stormarnschueler.de/GetData.php"; 
+  LinkGet = GetAddress; 
+  getData = "ID=" + String(id);
+  Serial.println("----------------Verbindung zum Server-----------------");
+  Serial.println("Get LED Status from Server or Database");
+  Serial.print("Request Link : ");
+  Serial.println(LinkGet);
+  http.begin(client, LinkGet); 
+  http.addHeader("Content-Type", "application/x-www-form-urlencoded");    
+  int httpCodeGet = http.POST(getData); 
+  String payloadGet = http.getString(); 
+  Serial.print("Response Code : "); 
+  Serial.println(httpCodeGet); 
+  Serial.print("Returned data from Server : ");
+  Serial.println(payloadGet); 
+
+  if (payloadGet == "1") {
+    digitalWrite(LED_D8, HIGH); 
+  }
+  if (payloadGet == "0") {
+    digitalWrite(LED_D8, LOW); 
+  }
+
+  
+  Serial.println("----------------Verbindung beenden----------------");
+  http.end(); //--> Close connection
+  Serial.println();
+  Serial.println("Pause bis zur nächsten Verbindung");
+  Serial.println();
+  delay(500); 
+}	
+	
+```
+	
+</details>
+	
 	
 <details>
 	<summary>index.php</summary>
