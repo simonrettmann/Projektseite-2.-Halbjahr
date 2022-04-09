@@ -49,6 +49,7 @@
 </body>
 <hr>
 
+<h2>Allgemeines</h2>
 <h3> <a id="rückblick"> 1.1 Ausgangslage</a></h3>
 
 <body>
@@ -227,7 +228,7 @@ Nicht mehr verwendet wird der rotary encoder, da die Einstellung der Temperatur 
 <img alt="Übersichtsskizze" src="https://user-images.githubusercontent.com/88385654/162335480-27590c81-ecdf-4a94-a0be-b45e95934eac.jpg">
 	
 <hr>
-
+<h2>Das Projekt</h2>
 <h3> <a id="arduino"> 2.1 Arduino </a></h3>
 
 Einige Teile vom Code des Projekts des ersten Halbjahrs konnten beibehalten werden. Da die Verarbeitung der eingestellten Temperatur zu einer Ventilstellung des Gaskochers, also der  Temperaturregulierung, zufriedenstellend gelang, wurde dieser Teil des Codes übernommen. Auch die Ansteuerung des Schrittmotors ist identisch. 
@@ -1505,7 +1506,7 @@ int setzeZahlZusammen(unsigned int high, unsigned int low) {        //Funktion, 
 </details>
 
 <hr>
-
+<h2>Reflexion</h2>
 <h3> <a id="relexion"> 3.1 Reflexion des Projekts </a></h3>
 
 Dieses Projekt hat von uns einiges abverlangt. Daher sind wir umso glücklicher und stolzer, dass jetzt dieses unserer Meinung nach sehr ansehnliche Endprodukt entstanden ist. Grundsätzlich lässt sich erneut sehr positiv festhalten, dass die Chemie innerhalb der Gruppe immer gestimmt hat. Allerdings wurden wir bei diesem Projekt vor mehr Hürden gestellt als beim Letzten. Dementsprechend sind leider auch ein paar Dinge, die wir fest geplant hatten umzusetzen, nicht erreicht worden. Dies liegt zum einen an dem deutlich größeren Zeitaufwand als eingangs erwartet und der aufgrund des Abiturs generell knappen Zeit. <br/>
