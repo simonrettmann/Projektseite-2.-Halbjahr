@@ -82,7 +82,7 @@ In diesem Projekt hat sich die Gruppe vielmehr das Ziel gesetzt, den im letzten 
 
 Das Projekt war für die Gruppe Neuland. Genau dieser Umstand begeisterte die Gruppe und machte das Projekt interessant, aber auch arbeitsaufwendig. Neben der Programmierung des Arduinos, der bereits gesteuert werden konnte, musste sich auch mit einem ESP, einem wlanfähigen Controller, einer Website (HTML, CSS), einer mySql-Datenbank und einen Server auseinandergesetzt werden. Da es sich hierbei um ein relativ komplexes Projekt handelt, müssen alle Schritte funktionieren und zusammenarbeiten oder das Projekt ist nicht erfolgreich. Dies stellt eine neute Situation für die Gruppe dar, da Software wenig Handlungsspielraum lässt und das für Hardware typische "Pfuschen" nicht funktioniert. 
 <br/>
-Konkret mussten folgende Dinge erlernt werden.
+Konkret mussten folgende Dinge erlernt werden:
 <ul>
  <li> Vertiefung der html-Kenntnisse zum Programmieren der Website</li>
  <li> Einarbeitung in css, damit man Design und Inhalt in Kombination mit einer html-Website trennen kann</li>
@@ -90,11 +90,11 @@ Konkret mussten folgende Dinge erlernt werden.
  <li> Einarbeitung in sql zur Erstellung einer mysql-Datenbank</li>
  </ul>
  
- Neben diesen Fähigkeiten, die sich angeeignet werden mussten, mussten im Vorhinein auch ein paar organisatorische Dinge erledigt werden. 
+ Neben diesen Fähigkeiten, die sich angeeignet werden mussten, mussten im Vorhinein auch ein paar organisatorische Dinge erledigt werden: 
  <ul>
-  <li>die erforderliche <a href="#hardware"> Hardware</a> musste angeschafft werden</li>
-  <li>da die Website von überall auf der Welt aufgerufen werden soll und nicht nur local gehostet werden soll, wird ein Server als Host für die Website benötigt</li>
- <li>damit die Werte gespeichert werden können, wird auch ein Datenbankzugang benötigt</li>
+  <li>Die erforderliche <a href="#hardware"> Hardware</a> musste angeschafft werden</li>
+  <li>Da die Website von überall auf der Welt aufgerufen werden soll und nicht nur local gehostet werden soll, wird ein Server als Host für die Website benötigt</li>
+ <li>Damit die Werte gespeichert werden können, wird auch ein Datenbankzugang benötigt</li>
 </ul>
 <br/>
 Bezüglich des Serverplatzes und des Datenbankzugangs wurde der Tipp von Herrn Buhl gegeben, sich mit Herrn Andy Adiwidjaja in Verbindung zu setzen, da dieser schon seit längerer Zeit Stormarnschüler bei ihren Informatikprojekten unterstützt. Nach kurzer E-Mailkorrespondenz stellte Herr Adiwidjaja netterweise sowohl Serverplatz mit einer Website (erreichbar unter http://gaskocher.stormarnschueler.de/index.php) als auch einen Datenbankzugang zur Verfügung. Vielen Dank auch an dieser Stelle für die Hilfsbereitschaft, da das Projekt ohne diese Hilfe nicht möglich gewesen wäre. 
