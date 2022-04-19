@@ -489,7 +489,7 @@ Allerdings funktionierte das input-Feld noch nicht, dafür musste erst das passe
  ```
  <?php
 
-$pdo = new PDO('mysql:host=localhost;dbname=sschuelersql4', 'sschuelersql4', 'lycquzesjb');
+$pdo = new PDO('mysql:host=localhost;dbname=****', '****', '*****');
 
 ?>
 ```
@@ -531,10 +531,10 @@ Auch wenn die Theorie hinter diesem Schritt ziemlich simpel ist, gestaltete sich
 ```
 <?php
 	class Database {
-		private static $dbName = 'sschuelersql4' ;
-		private static $dbHost = 'localhost' ;
-		private static $dbUsername = 'sschuelersql4';
-		private static $dbUserPassword = 'lycquzesjb';
+		private static $dbName = '****' ;
+		private static $dbHost = '****' ;
+		private static $dbUsername = '****';
+		private static $dbUserPassword = '****';
 		 
 		private static $cont  = null;
 		 
