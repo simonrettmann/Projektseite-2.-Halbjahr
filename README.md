@@ -570,10 +570,10 @@ Auch wenn die Theorie hinter diesem Schritt ziemlich simpel ist, gestaltete sich
 ```
  <?php
 
-  $dbName = 'sschuelersql4';
-  $dbHost = 'localhost';
-  $dbUsername = 'sschuelersql4';
-  $dbUserPassword = 'lycquzesjb';
+  $dbName = '****';
+  $dbHost = '****';
+  $dbUsername = '****';
+  $dbUserPassword = '****';
  $pdo = new PDO( "mysql:host=$dbHost;dbname=$dbName", $dbUsername, $dbUserPassword); //Verbindung mit der Datenbank
 
   $sql = 'SELECT * FROM gaskocher  WHERE   ID = (SELECT max(ID) From gaskocher)'; //Wert mit der höchsten ID wird aus der Tabelle Gaskocher ausgelesen
@@ -617,10 +617,10 @@ foreach($pdo->query($sql)as $row){
 
 <?php
 
-$dbname = 'sschuelersql4';
-$dbuser = 'sschuelersql4';  
-$dbpass = 'lycquzesjb'; 
-$dbhost = 'localhost'; 
+$dbname = '****';
+$dbuser = '****';  
+$dbpass = '****'; 
+$dbhost = '****'; 
 
 $connect = @mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
@@ -879,10 +879,10 @@ void loop() {
 	
 <?php
 
-  $dbName = 'sschuelersql4';
-  $dbHost = 'localhost';
-  $dbUsername = 'sschuelersql4';
-  $dbUserPassword = 'lycquzesjb';
+  $dbName = '****';
+  $dbHost = '****';
+  $dbUsername = '****';
+  $dbUserPassword = '****';
  $pdo = new PDO( "mysql:host=$dbHost;dbname=$dbName", $dbUsername, $dbUserPassword); //Verbindung mit der Datenbank
 
   $sql = 'SELECT FROM statusled  WHERE   ID = (0); //Wert mit der ID=0 wird aus der Datenbank ausgelesen und als Status 0,1 weitergegeben
@@ -1049,10 +1049,10 @@ table, th, td, caption {
 ```
 <?php
 	class Database {
-		private static $dbName = 'sschuelersql4' ;
-		private static $dbHost = 'localhost' ;
-		private static $dbUsername = 'sschuelersql4';
-		private static $dbUserPassword = 'lycquzesjb';
+		private static $dbName = '****' ;
+		private static $dbHost = '****' ;
+		private static $dbUsername = '****';
+		private static $dbUserPassword = '****';
 		 
 		private static $cont  = null;
 		 
@@ -1109,10 +1109,10 @@ header("location:index.php")
 ```
 <?php
 
-  $dbName = 'sschuelersql4';
-  $dbHost = 'localhost';
-  $dbUsername = 'sschuelersql4';
-  $dbUserPassword = 'lycquzesjb';
+  $dbName = '****';
+  $dbHost = '****';
+  $dbUsername = '****';
+  $dbUserPassword = '****';
  $pdo = new PDO( "mysql:host=$dbHost;dbname=$dbName", $dbUsername, $dbUserPassword); //Verbindung mit der Datenbank
 
   $sql = 'SELECT * FROM gaskocher  WHERE   ID = (SELECT max(ID) From gaskocher)'; //Wert mit der höchsten ID wird aus der Tabelle Gaskocher ausgelesen
@@ -1132,7 +1132,7 @@ header("location:index.php")
 	
 <?php
 
-$pdo = new PDO('mysql:host=localhost;dbname=sschuelersql4', 'sschuelersql4', 'lycquzesjb');
+$pdo = new PDO('mysql:host=localhost;dbname=****', '****', '****');
 
 ?>
 	
@@ -1170,10 +1170,10 @@ foreach($pdo->query($sql)as $row){
 
 <?php
 
-$dbname = 'sschuelersql4';
-$dbuser = 'sschuelersql4';  
-$dbpass = 'lycquzesjb'; 
-$dbhost = 'localhost'; 
+$dbname = '****';
+$dbuser = '****';  
+$dbpass = '****'; 
+$dbhost = '****'; 
 
 $connect = @mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
